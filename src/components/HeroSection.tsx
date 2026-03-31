@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle, Mail } from "lucide-react";
 import heroImg from "@/assets/hero-lab.jpg";
+import AnimatedCounter from "./AnimatedCounter";
 
 const WHATSAPP_URL = "https://wa.me/918800883727?text=Hi%20TechBridge%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.";
+const EMAIL = "techbridgesolutions2k25@gmail.com";
 
 const HeroSection = () => {
   return (
@@ -13,6 +15,23 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-secondary/70" />
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, hsl(220 20% 14% / 0.85), hsl(32 80% 50% / 0.2))" }} />
       </div>
+
+      {/* Animated geometric shapes */}
+      <motion.div
+        className="absolute top-20 right-10 w-32 h-32 border border-primary/20 rounded-2xl"
+        animate={{ rotate: [0, 90, 180, 270, 360], scale: [1, 1.1, 1] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      />
+      <motion.div
+        className="absolute bottom-32 right-1/4 w-16 h-16 bg-primary/10 rounded-full"
+        animate={{ y: [0, -30, 0], x: [0, 15, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute top-1/3 left-10 w-24 h-24 border border-primary/10 rounded-full"
+        animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.1, 0.3] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       <div className="relative container-narrow section-padding pt-32">
         <div className="max-w-3xl">
@@ -65,6 +84,13 @@ const HeroSection = () => {
               Enquire on WhatsApp
             </a>
             <a
+              href={`mailto:${EMAIL}`}
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg border border-secondary-foreground/20 text-secondary-foreground font-semibold font-body text-base hover:bg-secondary-foreground/5 transition-colors"
+            >
+              <Mail className="w-5 h-5" />
+              Email Us
+            </a>
+            <a
               href="#services"
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg border border-secondary-foreground/20 text-secondary-foreground font-semibold font-body text-base hover:bg-secondary-foreground/5 transition-colors"
             >
@@ -74,7 +100,7 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Stats bar */}
+        {/* Stats bar with animated counters */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -82,13 +108,15 @@ const HeroSection = () => {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12"
         >
           {[
-            { value: "500+", label: "Schools Served" },
-            { value: "15+", label: "Product Categories" },
-            { value: "10+", label: "Years Experience" },
-            { value: "Pan India", label: "Coverage" },
+            { value: 500, suffix: "+", label: "Schools Served" },
+            { value: 15, suffix: "+", label: "Product Categories" },
+            { value: 10, suffix: "+", label: "Years Experience" },
+            { value: 0, label: "Pan India", display: "Pan India" },
           ].map((stat) => (
             <div key={stat.label} className="text-center md:text-left">
-              <div className="text-2xl md:text-3xl font-display font-bold text-primary">{stat.value}</div>
+              <div className="text-2xl md:text-3xl font-display font-bold text-primary">
+                {stat.display ? stat.display : <AnimatedCounter target={stat.value} suffix={stat.suffix} />}
+              </div>
               <div className="text-sm font-body text-secondary-foreground/50 mt-1">{stat.label}</div>
             </div>
           ))}

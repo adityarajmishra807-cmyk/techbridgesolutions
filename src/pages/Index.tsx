@@ -6,10 +6,12 @@ import ProductShowcase from "@/components/ProductShowcase";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
+import FloatingElements from "@/components/FloatingElements";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <FloatingElements />
       <Navbar />
       <HeroSection />
       <AboutSection />
