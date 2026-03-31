@@ -22,7 +22,7 @@ const services = [
 
 const ServicesSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
     <section id="services" className="section-padding bg-muted/50" ref={ref}>
@@ -31,26 +31,26 @@ const ServicesSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="text-center max-w-2xl mx-auto mb-10 sm:mb-16"
         >
-          <span className="text-xs font-body font-semibold tracking-widest uppercase text-primary mb-4 block">Our Solutions</span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-4">
+          <span className="text-xs font-body font-semibold tracking-widest uppercase text-primary mb-3 sm:mb-4 block">Our Solutions</span>
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-3 sm:mb-4">
             Complete School <span className="text-gradient-warm">Infrastructure</span>
           </h2>
-          <p className="font-body text-muted-foreground text-base md:text-lg">
+          <p className="font-body text-muted-foreground text-sm sm:text-base md:text-lg">
             From science labs to solar panels — everything your institution needs under one roof.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5">
           {services.map((service, i) => {
             const CardContent = (
               <>
-                <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors duration-300">
-                  <service.icon className="w-6 h-6 text-accent-foreground group-hover:text-primary transition-colors duration-300" />
+                <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-accent flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/10 group-hover:shadow-[var(--shadow-glow)] transition-all duration-300">
+                  <service.icon className="w-5 sm:w-6 h-5 sm:h-6 text-accent-foreground group-hover:text-primary transition-colors duration-300" />
                 </div>
-                <h3 className="font-display text-base font-semibold text-foreground mb-2">{service.title}</h3>
-                <p className="font-body text-sm text-muted-foreground leading-relaxed mb-3">{service.desc}</p>
+                <h3 className="font-display text-sm sm:text-base font-semibold text-foreground mb-1 sm:mb-2">{service.title}</h3>
+                <p className="font-body text-xs sm:text-sm text-muted-foreground leading-relaxed mb-2 sm:mb-3 line-clamp-3">{service.desc}</p>
                 {service.link && (
                   <span className="inline-flex items-center gap-1 text-xs font-body font-medium text-primary">
                     View Details <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
@@ -64,17 +64,17 @@ const ServicesSection = () => {
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.1 + i * 0.05 }}
+                transition={{ duration: 0.5, delay: 0.05 + i * 0.04 }}
               >
                 {service.link ? (
                   <Link
                     to={service.link}
-                    className="group block p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-[var(--shadow-card)] transition-all duration-300"
+                    className="group block p-4 sm:p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-[var(--shadow-premium)] transition-all duration-300 h-full active:scale-[0.98]"
                   >
                     {CardContent}
                   </Link>
                 ) : (
-                  <div className="group p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-[var(--shadow-card)] transition-all duration-300 cursor-default">
+                  <div className="group p-4 sm:p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-[var(--shadow-card)] transition-all duration-300 cursor-default h-full">
                     {CardContent}
                   </div>
                 )}
@@ -87,13 +87,13 @@ const ServicesSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-12"
+          className="text-center mt-8 sm:mt-12"
         >
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold font-body hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold font-body text-sm sm:text-base hover:shadow-[var(--shadow-glow)] hover:scale-[1.02] transition-all duration-200 active:scale-[0.98]"
           >
             <MessageCircle className="w-5 h-5" />
             Get a Custom Quote

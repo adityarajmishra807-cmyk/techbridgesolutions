@@ -8,41 +8,49 @@ const EMAIL = "techbridgesolutions2k25@gmail.com";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-[100svh] flex items-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img src={heroImg} alt="Modern school laboratory" className="w-full h-full object-cover" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-secondary/70" />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, hsl(220 20% 14% / 0.85), hsl(32 80% 50% / 0.2))" }} />
+        <div className="absolute inset-0 bg-secondary/75" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, hsl(220 20% 14% / 0.88), hsl(32 80% 50% / 0.15))" }} />
       </div>
 
-      {/* Animated geometric shapes */}
+      {/* Animated geometric shapes - hidden on small mobile */}
       <motion.div
-        className="absolute top-20 right-10 w-32 h-32 border border-primary/20 rounded-2xl"
+        className="absolute top-20 right-10 w-32 h-32 border border-primary/15 rounded-2xl hidden sm:block"
         animate={{ rotate: [0, 90, 180, 270, 360], scale: [1, 1.1, 1] }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       />
       <motion.div
-        className="absolute bottom-32 right-1/4 w-16 h-16 bg-primary/10 rounded-full"
+        className="absolute bottom-32 right-1/4 w-16 h-16 bg-primary/8 rounded-full hidden sm:block"
         animate={{ y: [0, -30, 0], x: [0, 15, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute top-1/3 left-10 w-24 h-24 border border-primary/10 rounded-full"
+        className="absolute top-1/3 left-10 w-24 h-24 border border-primary/8 rounded-full hidden md:block"
         animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.1, 0.3] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
+      {/* Premium gold line accent */}
+      <motion.div
+        className="absolute bottom-0 left-0 right-0 h-[2px]"
+        style={{ background: "var(--gradient-warm)" }}
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 1.5, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
+      />
 
-      <div className="relative container-narrow section-padding pt-32">
+      <div className="relative container-narrow section-padding pt-24 sm:pt-32">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 border border-primary/30 mb-8"
+            className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-primary/15 border border-primary/25 mb-6 sm:mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-xs font-body font-medium text-primary-foreground/90 tracking-wide uppercase">
+            <span className="text-[10px] sm:text-xs font-body font-medium text-primary-foreground/90 tracking-wide uppercase">
               Trusted by 500+ Schools
             </span>
           </motion.div>
@@ -51,7 +59,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-secondary-foreground mb-6"
+            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-secondary-foreground mb-4 sm:mb-6"
           >
             Building{" "}
             <span className="text-gradient-warm">Future-Ready</span>
@@ -63,7 +71,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-lg md:text-xl font-body text-secondary-foreground/70 max-w-xl mb-10 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl font-body text-secondary-foreground/70 max-w-xl mb-8 sm:mb-10 leading-relaxed"
           >
             End-to-end school infrastructure solutions — from STEM labs and smart classrooms to sports courts and solar installations.
           </motion.p>
@@ -72,27 +80,27 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-3"
           >
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold font-body text-base hover:opacity-90 transition-opacity"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold font-body text-sm sm:text-base hover:shadow-[var(--shadow-glow)] hover:scale-[1.02] transition-all duration-200 active:scale-[0.98]"
             >
               <MessageCircle className="w-5 h-5" />
               Enquire on WhatsApp
             </a>
             <a
               href={`mailto:${EMAIL}`}
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg border border-secondary-foreground/20 text-secondary-foreground font-semibold font-body text-base hover:bg-secondary-foreground/5 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-secondary-foreground/20 text-secondary-foreground font-semibold font-body text-sm sm:text-base hover:bg-secondary-foreground/5 transition-all duration-200 active:scale-[0.98]"
             >
               <Mail className="w-5 h-5" />
               Email Us
             </a>
             <a
               href="#services"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg border border-secondary-foreground/20 text-secondary-foreground font-semibold font-body text-base hover:bg-secondary-foreground/5 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-secondary-foreground/20 text-secondary-foreground font-semibold font-body text-sm sm:text-base hover:bg-secondary-foreground/5 transition-all duration-200 active:scale-[0.98]"
             >
               Explore Solutions
               <ArrowRight className="w-4 h-4" />
@@ -100,24 +108,25 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Stats bar with animated counters */}
+        {/* Stats bar */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1 }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12"
+          className="mt-12 sm:mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-12 p-4 sm:p-6 rounded-2xl glass-card"
+          style={{ background: "hsl(220 20% 14% / 0.3)", backdropFilter: "blur(20px)" }}
         >
           {[
             { value: 500, suffix: "+", label: "Schools Served" },
             { value: 15, suffix: "+", label: "Product Categories" },
             { value: 10, suffix: "+", label: "Years Experience" },
-            { value: 0, label: "Pan India", display: "Pan India" },
+            { value: 0, label: "Coverage", display: "Pan India" },
           ].map((stat) => (
-            <div key={stat.label} className="text-center md:text-left">
-              <div className="text-2xl md:text-3xl font-display font-bold text-primary">
+            <div key={stat.label} className="text-center py-2">
+              <div className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-primary">
                 {stat.display ? stat.display : <AnimatedCounter target={stat.value} suffix={stat.suffix} />}
               </div>
-              <div className="text-sm font-body text-secondary-foreground/50 mt-1">{stat.label}</div>
+              <div className="text-xs sm:text-sm font-body text-secondary-foreground/50 mt-1">{stat.label}</div>
             </div>
           ))}
         </motion.div>
