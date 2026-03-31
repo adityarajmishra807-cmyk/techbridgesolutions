@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
 
 const WHATSAPP_URL = "https://wa.me/918800883727?text=Hi%20TechBridge%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.";
+const EMAIL = "techbridgesolutions2k25@gmail.com";
 
 const CTASection = () => {
   const ref = useRef(null);
@@ -25,15 +26,24 @@ const CTASection = () => {
               Get a free consultation and custom quote for your institution. Our team will design the perfect solution tailored to your space, budget, and requirements.
             </p>
 
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold font-body text-lg hover:opacity-90 transition-opacity"
-            >
-              <MessageCircle className="w-6 h-6" />
-              Chat on WhatsApp
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold font-body text-lg hover:opacity-90 transition-opacity"
+              >
+                <MessageCircle className="w-6 h-6" />
+                Chat on WhatsApp
+              </a>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl border border-secondary-foreground/20 text-secondary-foreground font-semibold font-body text-lg hover:bg-secondary-foreground/5 transition-colors"
+              >
+                <Mail className="w-6 h-6" />
+                Email Us
+              </a>
+            </div>
           </motion.div>
 
           <motion.div
@@ -45,7 +55,7 @@ const CTASection = () => {
             {[
               { icon: Phone, label: "Phone", value: "+91 88008 83727", href: "tel:+918800883727" },
               { icon: MessageCircle, label: "WhatsApp", value: "+91 88008 83727", href: WHATSAPP_URL },
-              { icon: Mail, label: "Email", value: "info@techbridge.in", href: "mailto:info@techbridge.in" },
+              { icon: Mail, label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
               { icon: MapPin, label: "Service Area", value: "Pan India Coverage", href: "#" },
             ].map((item) => (
               <a

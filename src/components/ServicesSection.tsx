@@ -1,16 +1,17 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Microscope, FlaskConical, Calculator, Dna, Monitor, Layers, Home, BookOpen, Armchair, PanelTop, Trophy, Sun, MessageCircle } from "lucide-react";
+import { Microscope, FlaskConical, Calculator, Dna, Monitor, Layers, Home, BookOpen, Armchair, PanelTop, Trophy, Sun, MessageCircle, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const WHATSAPP_URL = "https://wa.me/918800883727?text=Hi%20TechBridge%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.";
 
 const services = [
-  { icon: Microscope, title: "Physics Lab", desc: "Complete physics lab setups with optical benches, meters, electrical equipment and demonstration tables." },
-  { icon: FlaskConical, title: "Chemistry Lab", desc: "Fully equipped chemistry labs with glassware, reagent storage, fume hoods and safety systems." },
-  { icon: Calculator, title: "Maths Lab", desc: "Interactive maths labs with 3D models, geometry kits, algebra tools and digital learning aids." },
-  { icon: Dna, title: "Biology Lab", desc: "Biology labs with microscopes, specimen jars, dissection kits and anatomical models." },
-  { icon: Monitor, title: "Computer Lab", desc: "Modern computer labs with networking, UPS systems, ergonomic furniture and licensed software." },
-  { icon: Layers, title: "Composite Lab", desc: "Multi-disciplinary science labs combining Physics, Chemistry and Biology for Classes 6–10." },
+  { icon: Microscope, title: "Physics Lab", desc: "Complete physics lab setups with optical benches, meters, electrical equipment and demonstration tables.", link: "/labs/physics" },
+  { icon: FlaskConical, title: "Chemistry Lab", desc: "Fully equipped chemistry labs with glassware, reagent storage, fume hoods and safety systems.", link: "/labs/chemistry" },
+  { icon: Calculator, title: "Maths Lab", desc: "Interactive maths labs with 3D models, geometry kits, algebra tools and digital learning aids.", link: "/labs/maths" },
+  { icon: Dna, title: "Biology Lab", desc: "Biology labs with microscopes, specimen jars, dissection kits and anatomical models.", link: "/labs/biology" },
+  { icon: Monitor, title: "Computer Lab", desc: "Modern computer labs with networking, UPS systems, ergonomic furniture and licensed software.", link: "/labs/computer" },
+  { icon: Layers, title: "Composite Lab", desc: "Multi-disciplinary science labs combining Physics, Chemistry and Biology for Classes 6–10.", link: "/labs/composite" },
   { icon: Home, title: "Kindergarten Setup", desc: "Safe, colorful play areas with age-appropriate furniture, toys and educational materials." },
   { icon: BookOpen, title: "Library Setup", desc: "Complete library solutions with shelving, reading tables, and organized storage systems." },
   { icon: Armchair, title: "School Furniture", desc: "Benches, desks, chairs, almirahs and storage solutions built for durability and comfort." },
@@ -42,21 +43,44 @@ const ServicesSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {services.map((service, i) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.05 }}
-              className="group p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-[var(--shadow-card)] transition-all duration-300 cursor-default"
-            >
-              <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors duration-300">
-                <service.icon className="w-6 h-6 text-accent-foreground group-hover:text-primary transition-colors duration-300" />
-              </div>
-              <h3 className="font-display text-base font-semibold text-foreground mb-2">{service.title}</h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
-            </motion.div>
-          ))}
+          {services.map((service, i) => {
+            const CardContent = (
+              <>
+                <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors duration-300">
+                  <service.icon className="w-6 h-6 text-accent-foreground group-hover:text-primary transition-colors duration-300" />
+                </div>
+                <h3 className="font-display text-base font-semibold text-foreground mb-2">{service.title}</h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed mb-3">{service.desc}</p>
+                {service.link && (
+                  <span className="inline-flex items-center gap-1 text-xs font-body font-medium text-primary">
+                    View Details <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                )}
+              </>
+            );
+
+            return (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.1 + i * 0.05 }}
+              >
+                {service.link ? (
+                  <Link
+                    to={service.link}
+                    className="group block p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-[var(--shadow-card)] transition-all duration-300"
+                  >
+                    {CardContent}
+                  </Link>
+                ) : (
+                  <div className="group p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-[var(--shadow-card)] transition-all duration-300 cursor-default">
+                    {CardContent}
+                  </div>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
 
         <motion.div
