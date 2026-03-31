@@ -72,12 +72,12 @@ const ServicesSection = () => {
                 {service.link ? (
                   <Link
                     to={service.link}
-                    className="group block p-4 sm:p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-[var(--shadow-premium)] transition-all duration-300 h-full active:scale-[0.98]"
+                    className="group block p-4 sm:p-6 rounded-xl bg-secondary-foreground/5 border border-secondary-foreground/10 hover:border-primary/40 hover:bg-secondary-foreground/10 hover:shadow-[var(--shadow-premium)] transition-all duration-300 h-full active:scale-[0.98]"
                   >
                     {CardContent}
                   </Link>
                 ) : (
-                  <div className="group p-4 sm:p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-[var(--shadow-card)] transition-all duration-300 cursor-default h-full">
+                  <div className="group p-4 sm:p-6 rounded-xl bg-secondary-foreground/5 border border-secondary-foreground/10 hover:border-primary/40 hover:bg-secondary-foreground/10 hover:shadow-[var(--shadow-card)] transition-all duration-300 cursor-default h-full">
                     {CardContent}
                   </div>
                 )}
