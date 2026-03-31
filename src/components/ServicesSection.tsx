@@ -37,10 +37,10 @@ const ServicesSection = () => {
           className="text-center max-w-2xl mx-auto mb-10 sm:mb-16"
         >
           <span className="text-xs font-body font-semibold tracking-widest uppercase text-primary mb-3 sm:mb-4 block">Our Solutions</span>
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-3 sm:mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground leading-tight mb-3 sm:mb-4">
             Complete School <span className="text-gradient-warm">Infrastructure</span>
           </h2>
-          <p className="font-body text-muted-foreground text-sm sm:text-base md:text-lg">
+          <p className="font-body text-secondary-foreground/60 text-sm sm:text-base md:text-lg">
             From science labs to solar panels — everything your institution needs under one roof.
           </p>
         </motion.div>
