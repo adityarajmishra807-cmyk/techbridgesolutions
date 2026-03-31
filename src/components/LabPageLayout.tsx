@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowLeft, MessageCircle, Mail, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, MessageCircle, Mail, CheckCircle2, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -52,6 +52,14 @@ const LabPageLayout = ({
             style={{ background: `linear-gradient(135deg, hsl(220 20% 14% / 0.9), ${color}40)` }}
           />
         </div>
+        {/* Bottom accent line */}
+        <motion.div
+          className="absolute bottom-0 left-0 right-0 h-1 z-10"
+          style={{ background: `linear-gradient(90deg, ${color}, hsl(32 80% 50%))` }}
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1.2, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        />
         <div className="relative container-narrow section-padding pt-32 pb-16" ref={heroRef}>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -66,8 +74,10 @@ const LabPageLayout = ({
             initial={{ opacity: 0, y: 10 }}
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-xs font-body font-semibold tracking-widest uppercase text-primary mb-4 block"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/30 text-xs font-body font-semibold tracking-widest uppercase text-primary mb-4"
+            style={{ background: `${color}15` }}
           >
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             {subtitle}
           </motion.span>
           <motion.h1
@@ -89,10 +99,12 @@ const LabPageLayout = ({
         </div>
       </section>
 
-      {/* Features */}
-      <section className="section-padding bg-background">
-        <div className="container-narrow">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* Features - warm tinted background */}
+      <section className="section-padding relative overflow-hidden" style={{ background: "linear-gradient(180deg, hsl(34 45% 94%), hsl(38 50% 92%))" }}>
+        {/* Decorative orb */}
+        <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full opacity-20" style={{ background: color, filter: "blur(80px)" }} />
+        <div className="container-narrow relative">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -103,7 +115,7 @@ const LabPageLayout = ({
               >
                 Key <span className="text-gradient-warm">Features</span>
               </motion.h2>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {features.map((feature, i) => (
                   <motion.div
                     key={i}
@@ -111,9 +123,11 @@ const LabPageLayout = ({
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.08 }}
-                    className="flex items-start gap-3 p-4 rounded-xl bg-card border border-border"
+                    className="flex items-start gap-3 p-4 rounded-xl bg-background/70 backdrop-blur-sm border border-border hover:border-primary/30 hover:shadow-[var(--shadow-card)] transition-all duration-300 group"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                    <div className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 mt-0.5" style={{ background: `${color}20` }}>
+                      <CheckCircle2 className="w-4 h-4 text-primary" />
+                    </div>
                     <span className="font-body text-sm text-foreground leading-relaxed">{feature}</span>
                   </motion.div>
                 ))}
@@ -127,13 +141,20 @@ const LabPageLayout = ({
                 transition={{ duration: 0.7 }}
                 className="relative"
               >
-                <div className="rounded-2xl overflow-hidden shadow-[var(--shadow-elevated)]">
+                <div className="rounded-2xl overflow-hidden shadow-[var(--shadow-premium)]">
                   <img src={secondaryImage} alt={title} className="w-full h-auto object-cover" loading="lazy" />
                 </div>
                 <motion.div
-                  className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl bg-primary/10 -z-10"
+                  className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl -z-10"
+                  style={{ background: `${color}20` }}
                   animate={{ rotate: [0, 5, 0] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <motion.div
+                  className="absolute -top-4 -left-4 w-16 h-16 rounded-full -z-10"
+                  style={{ background: `${color}15` }}
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 />
               </motion.div>
             )}
@@ -141,38 +162,44 @@ const LabPageLayout = ({
         </div>
       </section>
 
-      {/* Equipment List */}
-      <section className="section-padding bg-muted/50" ref={equipRef}>
-        <div className="container-narrow">
+      {/* Equipment List - dark navy section */}
+      <section className="section-padding relative overflow-hidden" ref={equipRef} style={{ background: "linear-gradient(135deg, hsl(220 22% 12%), hsl(220 18% 18%))" }}>
+        {/* Top accent */}
+        <div className="absolute top-0 left-0 right-0 h-1" style={{ background: `linear-gradient(90deg, ${color}, hsl(32 80% 50%))` }} />
+        {/* Glow orbs */}
+        <div className="absolute -top-32 right-10 w-64 h-64 rounded-full opacity-10" style={{ background: color, filter: "blur(100px)" }} />
+        <div className="absolute -bottom-20 -left-20 w-48 h-48 rounded-full opacity-8" style={{ background: "hsl(32 80% 50%)", filter: "blur(80px)" }} />
+
+        <div className="container-narrow relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={equipInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-2xl mx-auto mb-16"
+            className="text-center max-w-2xl mx-auto mb-12 sm:mb-16"
           >
             <span className="text-xs font-body font-semibold tracking-widest uppercase text-primary mb-4 block">Equipment List</span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary-foreground leading-tight mb-4">
               Complete <span className="text-gradient-warm">Inventory</span>
             </h2>
-            <p className="font-body text-muted-foreground">Everything included in our standard setup for 40 students.</p>
+            <p className="font-body text-secondary-foreground/50">Everything included in our standard setup for 40 students.</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {equipment.map((cat, i) => (
               <motion.div
                 key={cat.category}
                 initial={{ opacity: 0, y: 30 }}
                 animate={equipInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
-                className="p-6 rounded-xl bg-background border border-border"
+                className="p-5 sm:p-6 rounded-xl bg-secondary-foreground/5 border border-secondary-foreground/10 hover:border-primary/30 hover:bg-secondary-foreground/8 transition-all duration-300 group"
               >
-                <h3 className="font-display text-lg font-semibold text-foreground mb-4 pb-3 border-b border-border">
+                <h3 className="font-display text-lg font-semibold text-secondary-foreground mb-4 pb-3 border-b" style={{ borderColor: `${color}30` }}>
                   {cat.category}
                 </h3>
-                <ul className="space-y-2">
+                <ul className="space-y-2.5">
                   {cat.items.map((item, j) => (
-                    <li key={j} className="font-body text-sm text-muted-foreground flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                    <li key={j} className="font-body text-sm text-secondary-foreground/60 flex items-start gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ background: color }} />
                       {item}
                     </li>
                   ))}
@@ -183,18 +210,21 @@ const LabPageLayout = ({
         </div>
       </section>
 
-      {/* Safety Notes */}
+      {/* Safety Notes - warm amber section */}
       {safetyNotes && safetyNotes.length > 0 && (
-        <section className="section-padding bg-background">
+        <section className="section-padding relative overflow-hidden" style={{ background: "linear-gradient(180deg, hsl(38 50% 92%), hsl(34 45% 94%))" }}>
           <div className="container-narrow max-w-3xl">
-            <motion.h2
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center"
+              className="text-center mb-8"
             >
-              Safety & <span className="text-gradient-warm">Best Practices</span>
-            </motion.h2>
+              <span className="text-xs font-body font-semibold tracking-widest uppercase text-primary mb-3 block">Guidelines</span>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">
+                Safety & <span className="text-gradient-warm">Best Practices</span>
+              </h2>
+            </motion.div>
             <div className="space-y-3">
               {safetyNotes.map((note, i) => (
                 <motion.div
@@ -203,8 +233,9 @@ const LabPageLayout = ({
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.05 }}
-                  className="p-4 rounded-lg bg-accent/50 border border-border font-body text-sm text-foreground leading-relaxed"
+                  className="flex items-start gap-3 p-4 rounded-xl bg-background/70 backdrop-blur-sm border border-primary/15 font-body text-sm text-foreground leading-relaxed hover:border-primary/30 transition-all duration-300"
                 >
+                  <ShieldCheck className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                   {note}
                 </motion.div>
               ))}
@@ -214,8 +245,10 @@ const LabPageLayout = ({
       )}
 
       {/* CTA */}
-      <section className="section-padding bg-secondary">
-        <div className="container-narrow text-center">
+      <section className="section-padding relative overflow-hidden bg-secondary">
+        <div className="absolute top-0 left-0 right-0 h-1" style={{ background: "var(--gradient-warm)" }} />
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full opacity-8" style={{ background: "hsl(32 80% 50%)", filter: "blur(120px)" }} />
+        <div className="container-narrow text-center relative">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -244,14 +277,14 @@ const LabPageLayout = ({
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold font-body text-lg hover:opacity-90 transition-opacity"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold font-body text-lg hover:shadow-[var(--shadow-glow)] hover:scale-[1.02] transition-all duration-200 active:scale-[0.98]"
             >
               <MessageCircle className="w-5 h-5" />
               WhatsApp Us
             </a>
             <a
               href={`mailto:${EMAIL}`}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-secondary-foreground/20 text-secondary-foreground font-semibold font-body text-lg hover:bg-secondary-foreground/5 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-secondary-foreground/20 text-secondary-foreground font-semibold font-body text-lg hover:bg-secondary-foreground/5 transition-all duration-200 active:scale-[0.98]"
             >
               <Mail className="w-5 h-5" />
               Email Us
