@@ -25,7 +25,10 @@ const ServicesSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id="services" className="section-padding bg-muted/50" ref={ref}>
+    <section id="services" className="section-padding relative overflow-hidden" ref={ref} style={{ background: "linear-gradient(135deg, hsl(220 22% 12%), hsl(220 18% 16%))" }}>
+      {/* Decorative accent */}
+      <div className="absolute top-0 left-0 w-full h-1" style={{ background: "var(--gradient-warm)" }} />
+      <div className="absolute -top-32 -right-32 w-64 h-64 rounded-full opacity-10" style={{ background: "hsl(32 80% 50%)", filter: "blur(80px)" }} />
       <div className="container-narrow">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
