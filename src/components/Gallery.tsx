@@ -104,9 +104,9 @@ const Gallery = () => {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-3 sm:px-4 py-2 rounded-full text-xs font-body font-medium transition-all duration-200 whitespace-nowrap shrink-0 active:scale-95 ${
-                  activeCategory === cat
+                activeCategory === cat
                     ? "bg-primary text-primary-foreground shadow-[var(--shadow-glow)]"
-                    : "bg-background border border-border text-muted-foreground hover:border-primary/30 hover:text-foreground"
+                    : "bg-secondary-foreground/10 border border-secondary-foreground/15 text-secondary-foreground/70 hover:border-primary/30 hover:text-secondary-foreground"
                 }`}
               >
                 {cat}

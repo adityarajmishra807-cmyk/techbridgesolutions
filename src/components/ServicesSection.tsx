@@ -49,11 +49,11 @@ const ServicesSection = () => {
           {services.map((service, i) => {
             const CardContent = (
               <>
-                <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-accent flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/10 group-hover:shadow-[var(--shadow-glow)] transition-all duration-300">
-                  <service.icon className="w-5 sm:w-6 h-5 sm:h-6 text-accent-foreground group-hover:text-primary transition-colors duration-300" />
+                <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-primary/15 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/25 group-hover:shadow-[var(--shadow-glow)] transition-all duration-300">
+                  <service.icon className="w-5 sm:w-6 h-5 sm:h-6 text-primary transition-colors duration-300" />
                 </div>
-                <h3 className="font-display text-sm sm:text-base font-semibold text-foreground mb-1 sm:mb-2">{service.title}</h3>
-                <p className="font-body text-xs sm:text-sm text-muted-foreground leading-relaxed mb-2 sm:mb-3 line-clamp-3">{service.desc}</p>
+                <h3 className="font-display text-sm sm:text-base font-semibold text-secondary-foreground mb-1 sm:mb-2">{service.title}</h3>
+                <p className="font-body text-xs sm:text-sm text-secondary-foreground/50 leading-relaxed mb-2 sm:mb-3 line-clamp-3">{service.desc}</p>
                 {service.link && (
                   <span className="inline-flex items-center gap-1 text-xs font-body font-medium text-primary">
                     View Details <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />

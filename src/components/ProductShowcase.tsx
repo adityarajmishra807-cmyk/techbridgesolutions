@@ -32,7 +32,7 @@ const ProductShowcase = () => {
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id="products" className="section-padding bg-background" ref={ref}>
+    <section id="products" className="section-padding relative overflow-hidden" ref={ref} style={{ background: "linear-gradient(180deg, hsl(38 50% 92%), hsl(34 45% 94%))" }}>
       <div className="container-narrow">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
