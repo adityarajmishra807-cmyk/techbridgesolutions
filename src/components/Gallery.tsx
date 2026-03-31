@@ -74,7 +74,8 @@ const Gallery = () => {
 
   return (
     <>
-      <section id="gallery" className="section-padding bg-muted/50" ref={ref}>
+      <section id="gallery" className="section-padding relative overflow-hidden" ref={ref} style={{ background: "linear-gradient(180deg, hsl(220 22% 12%), hsl(220 18% 18%))" }}>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full opacity-10" style={{ background: "hsl(32 80% 50%)", filter: "blur(100px)" }} />
         <div className="container-narrow">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
