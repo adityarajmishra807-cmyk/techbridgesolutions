@@ -15,7 +15,7 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id="about" className="section-padding bg-background" ref={ref}>
+    <section id="about" className="section-padding relative overflow-hidden" ref={ref} style={{ background: "linear-gradient(180deg, hsl(34 45% 94%), hsl(38 40% 96%))" }}>
       <div className="container-narrow">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <motion.div
