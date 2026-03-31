@@ -74,7 +74,8 @@ const Gallery = () => {
 
   return (
     <>
-      <section id="gallery" className="section-padding bg-muted/50" ref={ref}>
+      <section id="gallery" className="section-padding relative overflow-hidden" ref={ref} style={{ background: "linear-gradient(180deg, hsl(220 22% 12%), hsl(220 18% 18%))" }}>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full opacity-10" style={{ background: "hsl(32 80% 50%)", filter: "blur(100px)" }} />
         <div className="container-narrow">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -83,10 +84,10 @@ const Gallery = () => {
             className="text-center max-w-2xl mx-auto mb-8 sm:mb-10"
           >
             <span className="text-xs font-body font-semibold tracking-widest uppercase text-primary mb-3 sm:mb-4 block">Gallery</span>
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-3 sm:mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground leading-tight mb-3 sm:mb-4">
               Our <span className="text-gradient-warm">Installations</span>
             </h2>
-            <p className="font-body text-muted-foreground text-sm sm:text-base md:text-lg">
+            <p className="font-body text-secondary-foreground/60 text-sm sm:text-base md:text-lg">
               A showcase of completed school infrastructure projects across India.
             </p>
           </motion.div>
@@ -103,9 +104,9 @@ const Gallery = () => {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-3 sm:px-4 py-2 rounded-full text-xs font-body font-medium transition-all duration-200 whitespace-nowrap shrink-0 active:scale-95 ${
-                  activeCategory === cat
+                activeCategory === cat
                     ? "bg-primary text-primary-foreground shadow-[var(--shadow-glow)]"
-                    : "bg-background border border-border text-muted-foreground hover:border-primary/30 hover:text-foreground"
+                    : "bg-secondary-foreground/10 border border-secondary-foreground/15 text-secondary-foreground/70 hover:border-primary/30 hover:text-secondary-foreground"
                 }`}
               >
                 {cat}

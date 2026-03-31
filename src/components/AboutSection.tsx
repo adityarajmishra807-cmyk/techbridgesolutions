@@ -15,7 +15,7 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id="about" className="section-padding bg-background" ref={ref}>
+    <section id="about" className="section-padding relative overflow-hidden" ref={ref} style={{ background: "linear-gradient(180deg, hsl(34 45% 94%), hsl(38 40% 96%))" }}>
       <div className="container-narrow">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <motion.div
@@ -75,8 +75,8 @@ const AboutSection = () => {
               transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
               className="p-4 sm:p-6 rounded-xl bg-card border border-border hover:shadow-[var(--shadow-card)] hover:border-primary/20 transition-all duration-300 group"
             >
-              <div className="w-10 sm:w-11 h-10 sm:h-11 rounded-lg bg-accent flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/10 transition-colors duration-300">
-                <item.icon className="w-4 sm:w-5 h-4 sm:h-5 text-accent-foreground group-hover:text-primary transition-colors duration-300" />
+              <div className="w-10 sm:w-11 h-10 sm:h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/20 transition-colors duration-300">
+                <item.icon className="w-4 sm:w-5 h-4 sm:h-5 text-primary group-hover:text-primary transition-colors duration-300" />
               </div>
               <h3 className="font-display text-sm sm:text-lg font-semibold text-foreground mb-1 sm:mb-2">{item.title}</h3>
               <p className="font-body text-xs sm:text-sm text-muted-foreground leading-relaxed">{item.desc}</p>

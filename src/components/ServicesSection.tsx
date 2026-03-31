@@ -25,7 +25,10 @@ const ServicesSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id="services" className="section-padding bg-muted/50" ref={ref}>
+    <section id="services" className="section-padding relative overflow-hidden" ref={ref} style={{ background: "linear-gradient(135deg, hsl(220 22% 12%), hsl(220 18% 16%))" }}>
+      {/* Decorative accent */}
+      <div className="absolute top-0 left-0 w-full h-1" style={{ background: "var(--gradient-warm)" }} />
+      <div className="absolute -top-32 -right-32 w-64 h-64 rounded-full opacity-10" style={{ background: "hsl(32 80% 50%)", filter: "blur(80px)" }} />
       <div className="container-narrow">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,10 +37,10 @@ const ServicesSection = () => {
           className="text-center max-w-2xl mx-auto mb-10 sm:mb-16"
         >
           <span className="text-xs font-body font-semibold tracking-widest uppercase text-primary mb-3 sm:mb-4 block">Our Solutions</span>
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-3 sm:mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground leading-tight mb-3 sm:mb-4">
             Complete School <span className="text-gradient-warm">Infrastructure</span>
           </h2>
-          <p className="font-body text-muted-foreground text-sm sm:text-base md:text-lg">
+          <p className="font-body text-secondary-foreground/60 text-sm sm:text-base md:text-lg">
             From science labs to solar panels — everything your institution needs under one roof.
           </p>
         </motion.div>
@@ -46,11 +49,11 @@ const ServicesSection = () => {
           {services.map((service, i) => {
             const CardContent = (
               <>
-                <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-accent flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/10 group-hover:shadow-[var(--shadow-glow)] transition-all duration-300">
-                  <service.icon className="w-5 sm:w-6 h-5 sm:h-6 text-accent-foreground group-hover:text-primary transition-colors duration-300" />
+                <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-primary/15 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/25 group-hover:shadow-[var(--shadow-glow)] transition-all duration-300">
+                  <service.icon className="w-5 sm:w-6 h-5 sm:h-6 text-primary transition-colors duration-300" />
                 </div>
-                <h3 className="font-display text-sm sm:text-base font-semibold text-foreground mb-1 sm:mb-2">{service.title}</h3>
-                <p className="font-body text-xs sm:text-sm text-muted-foreground leading-relaxed mb-2 sm:mb-3 line-clamp-3">{service.desc}</p>
+                <h3 className="font-display text-sm sm:text-base font-semibold text-secondary-foreground mb-1 sm:mb-2">{service.title}</h3>
+                <p className="font-body text-xs sm:text-sm text-secondary-foreground/50 leading-relaxed mb-2 sm:mb-3 line-clamp-3">{service.desc}</p>
                 {service.link && (
                   <span className="inline-flex items-center gap-1 text-xs font-body font-medium text-primary">
                     View Details <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
@@ -69,12 +72,12 @@ const ServicesSection = () => {
                 {service.link ? (
                   <Link
                     to={service.link}
-                    className="group block p-4 sm:p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-[var(--shadow-premium)] transition-all duration-300 h-full active:scale-[0.98]"
+                    className="group block p-4 sm:p-6 rounded-xl bg-secondary-foreground/5 border border-secondary-foreground/10 hover:border-primary/40 hover:bg-secondary-foreground/10 hover:shadow-[var(--shadow-premium)] transition-all duration-300 h-full active:scale-[0.98]"
                   >
                     {CardContent}
                   </Link>
                 ) : (
-                  <div className="group p-4 sm:p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-[var(--shadow-card)] transition-all duration-300 cursor-default h-full">
+                  <div className="group p-4 sm:p-6 rounded-xl bg-secondary-foreground/5 border border-secondary-foreground/10 hover:border-primary/40 hover:bg-secondary-foreground/10 hover:shadow-[var(--shadow-card)] transition-all duration-300 cursor-default h-full">
                     {CardContent}
                   </div>
                 )}
