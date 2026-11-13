@@ -1,26 +1,51 @@
-# Dynamic Web Experiences
+# TechBridge Solutions
 
-create a informative website beautifully animated with motion grafhics on the pdf i gave you and a enquire now option of whats app number(8800883727) make it very professtional and not look vibe coded
+Production website: https://techbridgesolutions.co.in/
 
-This project was built with [Lovable](https://lovable.dev).
+TechBridge Solutions presents educational laboratory setups and modern learning environments for schools and institutions. The website showcases the available lab categories, product environments, project imagery and enquiry channels.
 
-**Live app**: https://techbridgesolutions.lovable.app
+## Website sections
 
-## Build with Lovable
+- Overview and featured learning environments
+- About TechBridge Solutions
+- Educational lab and infrastructure solutions
+- Product and project showcases
+- Gallery
+- Contact and WhatsApp enquiries
+- Dedicated pages for Physics, Chemistry, Mathematics, Biology, Computer and Composite laboratories
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/49ae5f69-704f-433a-857d-7df621755db5).
+## Technology
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+- React 18 and TypeScript
+- Vite
+- Tailwind CSS
+- Radix UI and reusable UI components
+- Framer Motion
+- React Router
 
-## Development
+## Local development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requirements: Node.js and npm.
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+```bash
+npm install
 npm run dev
 ```
+
+## Available scripts
+
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the local development server |
+| `npm run build` | Create the production build in `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
+| `npm test` | Run the Vitest test suite |
+
+## Deployment
+
+The `main` branch is connected to Vercel. Commits pushed to `main` trigger a production deployment. The project uses the Vite build output in `dist/`.
+
+## Contact
+
+Website enquiries are directed to the contact options shown on the website, including WhatsApp.
