@@ -11,7 +11,7 @@ const services = [
   { icon: Calculator, title: "Maths Lab", desc: "Interactive maths labs with 3D models, geometry kits, algebra tools and digital learning aids.", link: "/labs/maths" },
   { icon: Dna, title: "Biology Lab", desc: "Biology labs with microscopes, specimen jars, dissection kits and anatomical models.", link: "/labs/biology" },
   { icon: Monitor, title: "Computer Lab", desc: "Modern computer labs with networking, UPS systems, ergonomic furniture and licensed software.", link: "/labs/computer" },
-  { icon: Layers, title: "Composite Lab", desc: "Multi-disciplinary science labs combining Physics, Chemistry and Biology for Classes 6–10.", link: "/labs/composite" },
+  { icon: Layers, title: "Composite Lab", desc: "Multi-disciplinary science labs that organise Physics, Chemistry and Biology activities in one shared space.", link: "/labs/composite" },
   { icon: Home, title: "Kindergarten Setup", desc: "Safe, colorful play areas with age-appropriate furniture, toys and educational materials." },
   { icon: BookOpen, title: "Library Setup", desc: "Complete library solutions with shelving, reading tables, and organized storage systems." },
   { icon: Armchair, title: "School Furniture", desc: "Benches, desks, chairs, almirahs and storage solutions built for durability and comfort." },

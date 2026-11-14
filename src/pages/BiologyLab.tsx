@@ -6,17 +6,31 @@ const BiologyLab = () => (
   <LabPageLayout
     title="Biology Lab"
     subtitle="Life Sciences"
-    description="Complete biology lab with microscopes, specimen jars, dissection kits, anatomical models, and all apparatus needed for Classes 9–12 as per CBSE guidelines."
+    description="Biology lab equipment for schools, including microscopes, prepared slides, specimen jars, glassware, anatomical models, charts and practical safety essentials."
+    h1Title="Biology Lab Setup for Schools"
+    planningTitle="Plan Biology Lab Equipment for Observation and Practical Work"
+    planningDescription="Biology laboratory requirements vary with the classes and practical activities being taught. Plan microscopes, slides, models, specimen materials, glassware and protective equipment together, while checking the school's policies for specimens and dissection."
+    planningChecks={[
+      "List microscopy, cell study, botany, anatomy and other practical activities for the relevant classes.",
+      "Choose microscope quantities and magnification needs according to the number of student groups.",
+      "Plan slide, specimen and model storage, including labels and handling instructions.",
+      "Check school policies for preserved specimens, dissection activities, protective equipment and bio-waste disposal.",
+    ]}
+    faqs={[
+      { question: "What equipment is commonly included in a school biology lab?", answer: "The listed categories include microscopes, prepared slides, glass slides and cover slips, specimen jars, dissection tools, botany apparatus, glassware, anatomical models and charts." },
+      { question: "How many microscopes does a school biology lab need?", answer: "The quantity depends on the class size, practical timetable, group rotation and whether students work individually or in teams. Confirm the number after reviewing the school's practical plan." },
+      { question: "What should schools consider when selecting specimens and dissection materials?", answer: "Check the school's current curriculum, institutional policies and applicable rules. Where suitable, models and prepared slides can support observation without requiring dissection." },
+    ]}
     heroImage={bioImg}
     secondaryImage={labIntro2}
     color="hsl(140, 50%, 40%)"
     features={[
-      "Compound and simple microscopes for detailed observation",
-      "Complete dissection kits with safety equipment",
-      "Preserved specimens and 3D anatomical models",
-      "Botany apparatus for plant study",
-      "Proper chemical storage for stains and reagents",
-      "Ventilated and hygienic lab environment",
+      "Compound and simple microscopes for observation activities",
+      "Prepared slides, slide storage and specimen containers",
+      "Dissection tools and protective equipment where permitted by school policy",
+      "Preserved specimens, anatomical models and biology charts",
+      "Botany apparatus and materials for plant-study activities",
+      "Appropriate storage, ventilation and bio-waste arrangements",
     ]}
     equipment={[
       {

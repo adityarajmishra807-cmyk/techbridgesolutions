@@ -12,6 +12,11 @@ const EMAIL = "techbridgesolutions2k25@gmail.com";
 
 interface LabPageProps {
   title: string;
+  h1Title: string;
+  planningTitle: string;
+  planningDescription: string;
+  planningChecks: string[];
+  faqs: { question: string; answer: string }[];
   subtitle: string;
   description: string;
   heroImage: string;
@@ -24,6 +29,11 @@ interface LabPageProps {
 
 const LabPageLayout = ({
   title,
+  h1Title,
+  planningTitle,
+  planningDescription,
+  planningChecks,
+  faqs,
   subtitle,
   description,
   heroImage,
@@ -86,7 +96,7 @@ const LabPageLayout = ({
             transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground leading-[1.1] mb-6"
           >
-            {title}
+            {h1Title}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -162,6 +172,25 @@ const LabPageLayout = ({
         </div>
       </section>
 
+      {/* School lab planning - practical buyer guidance */}
+      <section className="section-padding relative overflow-hidden" style={{ background: "linear-gradient(180deg, hsl(38 50% 92%), hsl(34 45% 94%))" }}>
+        <div className="container-narrow max-w-5xl">
+          <div className="text-center max-w-3xl mx-auto mb-8">
+            <span className="text-xs font-body font-semibold tracking-widest uppercase text-primary mb-3 block">School Lab Planning</span>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">{planningTitle}</h2>
+            <p className="font-body text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed">{planningDescription}</p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {planningChecks.map((check, i) => (
+              <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-background/70 border border-border">
+                <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                <p className="font-body text-sm text-foreground leading-relaxed">{check}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Equipment List - dark navy section */}
       <section className="section-padding relative overflow-hidden" ref={equipRef} style={{ background: "linear-gradient(135deg, hsl(220 22% 12%), hsl(220 18% 18%))" }}>
         {/* Top accent */}
@@ -181,7 +210,7 @@ const LabPageLayout = ({
             <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary-foreground leading-tight mb-4">
               Complete <span className="text-gradient-warm">Inventory</span>
             </h2>
-            <p className="font-body text-secondary-foreground/50">Everything included in our standard setup for 40 students.</p>
+            <p className="font-body text-secondary-foreground/50">The list below shows equipment categories and examples for this laboratory. Check final selection and quantities against the school's class levels, practical programme and existing inventory.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -238,6 +267,29 @@ const LabPageLayout = ({
                   <ShieldCheck className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                   {note}
                 </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Subject-specific FAQs */}
+      {faqs.length > 0 && (
+        <section className="section-padding relative overflow-hidden" style={{ background: "linear-gradient(180deg, hsl(34 45% 94%), hsl(38 50% 92%))" }}>
+          <div className="container-narrow max-w-4xl">
+            <div className="text-center mb-8">
+              <span className="text-xs font-body font-semibold tracking-widest uppercase text-primary mb-3 block">Common Questions</span>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">{title} Setup FAQs</h2>
+            </div>
+            <div className="space-y-3">
+              {faqs.map((faq, i) => (
+                <details key={i} className="group rounded-xl bg-background/80 border border-border p-4 sm:p-5">
+                  <summary className="cursor-pointer list-none flex items-center justify-between gap-4 font-display text-base sm:text-lg font-semibold text-foreground">
+                    {faq.question}
+                    <span className="text-primary transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                  </summary>
+                  <p className="font-body text-sm sm:text-base text-muted-foreground leading-relaxed mt-3 pr-6">{faq.answer}</p>
+                </details>
               ))}
             </div>
           </div>
