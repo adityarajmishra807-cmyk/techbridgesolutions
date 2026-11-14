@@ -21,7 +21,6 @@ const ParallaxImage = ({ src, alt, className = "", speed = 0.3 }: ParallaxImageP
         style={{ y }}
         className="w-full h-[120%] object-cover"
         loading="eager"
-        fetchPriority="high"
       />
     </div>
   );
