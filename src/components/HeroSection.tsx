@@ -51,7 +51,7 @@ const HeroSection = () => {
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-[10px] sm:text-xs font-body font-medium text-primary-foreground/90 tracking-wide uppercase">
-              Trusted by 500+ Schools
+              School Lab & Infrastructure Solutions
             </span>
           </motion.div>
 
@@ -61,10 +61,10 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-secondary-foreground mb-4 sm:mb-6"
           >
-            Building{" "}
-            <span className="text-gradient-warm">Future-Ready</span>
+            School{" "}
+            <span className="text-gradient-warm">Laboratory</span>
             <br />
-            Learning Spaces
+            Setup &amp; Infrastructure
           </motion.h1>
 
           <motion.p
@@ -73,7 +73,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-base sm:text-lg md:text-xl font-body text-secondary-foreground/70 max-w-xl mb-8 sm:mb-10 leading-relaxed"
           >
-            End-to-end school infrastructure solutions — from STEM labs and smart classrooms to sports courts and solar installations.
+            School laboratory setup and equipment for physics, chemistry, maths, biology, computer and composite labs, alongside wider school infrastructure solutions. Based in Gorakhpur, supporting school requirements across Uttar Pradesh, Bihar, Delhi and Uttarakhand.
           </motion.p>
 
           <motion.div
@@ -117,10 +117,10 @@ const HeroSection = () => {
           style={{ background: "hsl(220 20% 14% / 0.3)", backdropFilter: "blur(20px)" }}
         >
           {[
-            { value: 500, suffix: "+", label: "Schools Served" },
-            { value: 15, suffix: "+", label: "Product Categories" },
-            { value: 10, suffix: "+", label: "Years Experience" },
-            { value: 0, label: "Coverage", display: "Pan India" },
+            { value: 6, suffix: "", label: "Lab Categories" },
+            { value: 4, suffix: "", label: "Target Regions" },
+            { value: 0, label: "Operating Base", display: "Gorakhpur" },
+            { value: 0, label: "Infrastructure Focus", display: "School-wide" },
           ].map((stat) => (
             <div key={stat.label} className="text-center py-2">
               <div className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-primary">

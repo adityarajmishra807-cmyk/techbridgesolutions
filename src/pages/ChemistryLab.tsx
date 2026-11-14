@@ -6,18 +6,32 @@ const ChemistryLab = () => (
   <LabPageLayout
     title="Chemistry Lab"
     subtitle="Science Infrastructure"
-    description="A well-equipped Chemistry Laboratory essential for developing scientific aptitude and practical skills. Designed as per CBSE safety and infrastructure norms with durable equipment, proper ventilation, and safety tools."
+    description="Chemistry lab equipment for schools, including balances, heating apparatus, stands, glassware, reagent storage and safety essentials for practical work."
+    h1Title="Chemistry Lab Setup for Schools"
+    planningTitle="Plan Chemistry Equipment, Storage and Safety Together"
+    planningDescription="Chemistry laboratory planning needs to consider the practical programme as well as glassware, heating equipment, reagent storage, ventilation and waste handling. Match the equipment list to the school's current experiments and the room's facilities."
+    planningChecks={[
+      "Map the glassware, measuring equipment and apparatus required for each practical.",
+      "Plan chemical storage, clear labels, segregation and access controls with the school's safety procedures.",
+      "Check ventilation and extraction needs against the substances and experiments being used.",
+      "Include appropriate protective equipment, first-aid access and waste-disposal arrangements.",
+    ]}
+    faqs={[
+      { question: "What equipment is listed for a school chemistry lab?", answer: "The page inventory includes balances and durable apparatus, heating and support equipment, common laboratory glassware, and tools such as test-tube stands, brushes, funnels and pestles." },
+      { question: "How should schools plan chemistry glassware quantities?", answer: "Use the class-wise practical list, student group size and experiment timetable. Check existing usable glassware before deciding what needs to be added or replaced." },
+      { question: "What safety points matter when planning a chemistry laboratory?", answer: "Review chemical labelling and storage, ventilation, protective equipment, fire-safety provisions, first-aid access and disposal procedures with the school's designated safety staff." },
+    ]}
     heroImage={chemImg}
     secondaryImage={labIntro2}
     color="hsl(150, 60%, 40%)"
     features={[
-      "Durable equipment: balances, burners, stands, and heating devices",
-      "Essential glassware: beakers, flasks, burettes, test tubes",
-      "Proper ventilation and fume extraction systems",
-      "Storage cabinets for safe chemical handling",
-      "Fire extinguishers and first-aid kits",
-      "Supports all mandatory experiments for Classes 9–12",
-      "Secure environment for hands-on chemistry learning",
+      "Balances, burners, stands and heating apparatus for school practicals",
+      "Glassware including beakers, flasks, burettes and test tubes",
+      "Ventilation and extraction planned for intended experiments and room layout",
+      "Storage arranged for labelled chemicals and laboratory materials",
+      "Fire-safety and first-aid provisions",
+      "Apparatus and reagent quantities reviewed against the school's current practical programme",
+      "Clear work areas for supervised chemistry activities",
     ]}
     equipment={[
       {

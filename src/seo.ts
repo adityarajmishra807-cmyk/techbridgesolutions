@@ -6,13 +6,13 @@ export const LOGO_URL = `${SITE_URL}/favicon.svg`;
 export interface RouteSeo { title: string; description: string; }
 const SUFFIX = `| ${SITE_NAME}`;
 export const ROUTE_SEO: Record<string, RouteSeo> = {
-  "/": { title: "School Laboratory Setup | TechBridge Solutions", description: "School laboratory setup and equipment solutions for physics, chemistry, biology, maths and computer labs. Explore TechBridge school infrastructure." },
-  "/labs/physics": { title: `Physics Lab Setup for Schools ${SUFFIX}`, description: "Physics laboratory setup for schools with optical benches, meters, electrical equipment, demonstration tables and storage. Explore TechBridge solutions." },
-  "/labs/chemistry": { title: `Chemistry Lab Setup for Schools ${SUFFIX}`, description: "Chemistry laboratory setup for schools with glassware, reagent storage, fume hoods and safety equipment. Explore TechBridge solutions." },
-  "/labs/maths": { title: `Maths Lab Setup for Schools ${SUFFIX}`, description: "Mathematics laboratory setup for schools with 3D models, geometry kits, algebra tools and teaching aids. Explore TechBridge solutions." },
-  "/labs/biology": { title: `Biology Lab Setup for Schools ${SUFFIX}`, description: "Biology laboratory setup for schools with microscopes, specimen jars, dissection kits and anatomical models. Explore TechBridge solutions." },
-  "/labs/computer": { title: `Computer Lab Setup for Schools ${SUFFIX}`, description: "Computer laboratory setup for schools with networking, UPS systems, ergonomic furniture and licensed software. Explore TechBridge solutions." },
-  "/labs/composite": { title: `Composite Science Lab Setup for Schools ${SUFFIX}`, description: "Integrated science laboratory solutions for school learning across physics, chemistry and biology. Explore TechBridge composite lab infrastructure." },
+  "/": { title: "School Lab Setup & Equipment | TechBridge Solutions", description: "School lab setup and equipment for physics, chemistry, maths, biology, computer and composite labs. Based in Gorakhpur; serving schools across UP, Bihar, Delhi and Uttarakhand." },
+  "/labs/physics": { title: `Physics Lab Setup for Schools ${SUFFIX}`, description: "Physics lab equipment for schools, including optics, mechanics, electrical measurement apparatus, demonstration equipment and storage for practical work." },
+  "/labs/chemistry": { title: `Chemistry Lab Equipment for Schools ${SUFFIX}`, description: "Chemistry lab equipment for schools, including glassware, balances, heating apparatus, stands, reagent storage and safety essentials for practical work." },
+  "/labs/maths": { title: `Maths Lab Equipment for Schools ${SUFFIX}`, description: "Maths lab equipment for schools, including geometry models, manipulatives, algebra kits, mensuration tools, trigonometry models and logic activities." },
+  "/labs/biology": { title: `Biology Lab Equipment for Schools ${SUFFIX}`, description: "Biology lab equipment for schools, including microscopes, prepared slides, specimen jars, glassware, anatomical models, charts and safety essentials." },
+  "/labs/computer": { title: `Computer Lab Setup for Schools ${SUFFIX}`, description: "Computer lab setup for schools with workstations, networking, UPS and power backup, peripherals, software and computer furniture." },
+  "/labs/composite": { title: `Composite Science Lab Setup for Schools ${SUFFIX}`, description: "Composite science lab setup for schools combining physics, chemistry and biology equipment, glassware, models, storage and safety essentials." },
 };
 export const ROUTES = Object.keys(ROUTE_SEO);
 export const NOT_FOUND_SEO: RouteSeo = { title: `Page not found ${SUFFIX}`, description: "The page you requested could not be found." };
