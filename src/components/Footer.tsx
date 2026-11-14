@@ -22,7 +22,7 @@ const Footer = () => {
                 <Mail className="w-3 h-3 shrink-0" /> <span className="truncate">{EMAIL}</span>
               </a>
               <span className="flex items-center gap-2 font-body text-xs text-secondary-foreground/40">
-                <MapPin className="w-3 h-3 shrink-0" /> Pan India Coverage
+                <MapPin className="w-3 h-3 shrink-0" /> Based in Gorakhpur · UP, Bihar, Delhi & Uttarakhand
               </span>
             </div>
           </div>

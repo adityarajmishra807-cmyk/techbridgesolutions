@@ -36,7 +36,7 @@ const ComputerLab = () => (
       {
         category: "Core Hardware",
         items: [
-          "Desktop computers (15–40 units)", "Teacher / instructor computer",
+          "Desktop computers (quantity based on class strength)", "Teacher / instructor computer",
           "LED monitors", "Keyboards (spill-resistant)", "Optical/wireless mouse",
           "Headphones / headsets", "Webcams",
         ],
@@ -62,7 +62,7 @@ const ComputerLab = () => (
         items: [
           "Licensed OS (Windows / Linux / ChromeOS)", "Antivirus / endpoint protection",
           "Office suite (MS Office / Google Workspace)", "Programming tools (Scratch, Python, Java, C++)",
-          "Educational software (CBSE ICT curriculum)", "Multimedia software",
+          "Educational software aligned with the school's curriculum", "Multimedia software",
         ],
       },
       {

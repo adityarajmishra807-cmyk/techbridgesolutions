@@ -88,7 +88,7 @@ const CompositeLab = () => (
       "Proper ventilation, water supply, gas supply, and first-aid arrangements",
       "Chemical storage in ventilated cabinets with proper labeling",
       "Bio-waste disposal following ethical norms",
-      "Lab coats, gloves, masks, and goggles mandatory",
+      "Use lab coats, gloves, masks and goggles as appropriate to the materials and experiments",
     ]}
   />
 );

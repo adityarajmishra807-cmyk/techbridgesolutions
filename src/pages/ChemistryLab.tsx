@@ -70,7 +70,7 @@ const ChemistryLab = () => (
     safetyNotes={[
       "All chemicals must be properly labeled and stored in ventilated cabinets",
       "Fire extinguisher (CO₂ type recommended) at accessible location",
-      "Lab coats, gloves, and safety goggles mandatory during experiments",
+      "Use lab coats, gloves and safety goggles as required by each experiment and the school's safety procedures",
       "Proper waste disposal protocols for chemical waste",
       "Adequate ventilation and exhaust systems required",
     ]}

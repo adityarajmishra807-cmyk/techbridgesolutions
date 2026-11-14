@@ -118,7 +118,7 @@ const HeroSection = () => {
         >
           {[
             { value: 6, suffix: "", label: "Lab Categories" },
-            { value: 4, suffix: "", label: "Target Regions" },
+            { value: 4, suffix: "", label: "Focus Regions" },
             { value: 0, label: "Operating Base", display: "Gorakhpur" },
             { value: 0, label: "Infrastructure Focus", display: "School-wide" },
           ].map((stat) => (
