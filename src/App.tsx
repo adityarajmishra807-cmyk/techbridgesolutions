@@ -11,29 +11,42 @@ import MathsLab from "./pages/MathsLab.tsx";
 import BiologyLab from "./pages/BiologyLab.tsx";
 import ComputerLab from "./pages/ComputerLab.tsx";
 import CompositeLab from "./pages/CompositeLab.tsx";
+import RouteMeta from "./components/RouteMeta.tsx";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+export const AppRoutes = () => (
+  <>
+    <RouteMeta />
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="/labs/physics" element={<PhysicsLab />} />
+      <Route path="/labs/chemistry" element={<ChemistryLab />} />
+      <Route path="/labs/maths" element={<MathsLab />} />
+      <Route path="/labs/biology" element={<BiologyLab />} />
+      <Route path="/labs/computer" element={<ComputerLab />} />
+      <Route path="/labs/composite" element={<CompositeLab />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  </>
+);
+
+export const AppProviders = ({ children }: { children: React.ReactNode }) => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/labs/physics" element={<PhysicsLab />} />
-          <Route path="/labs/chemistry" element={<ChemistryLab />} />
-          <Route path="/labs/maths" element={<MathsLab />} />
-          <Route path="/labs/biology" element={<BiologyLab />} />
-          <Route path="/labs/computer" element={<ComputerLab />} />
-          <Route path="/labs/composite" element={<CompositeLab />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      {children}
     </TooltipProvider>
   </QueryClientProvider>
+);
+
+const App = () => (
+  <AppProviders>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  </AppProviders>
 );
 
 export default App;

@@ -5,12 +5,12 @@ import { createPortal } from "react-dom";
 import logo from "@/assets/techbridge-logo.png";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Products", href: "#products" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/#services" },
+  { label: "Products", href: "/#products" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const WHATSAPP_URL = "https://wa.me/918800883727?text=Hi%20TechBridge%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.";
@@ -51,7 +51,7 @@ const Navbar = () => {
         }`}
       >
         <div className="container-narrow flex items-center justify-between h-14 sm:h-16 px-4 sm:px-6 lg:px-12">
-          <a href="#home" className="flex items-center gap-2 shrink-0">
+          <a href="/#home" className="flex items-center gap-2 shrink-0">
             <img src={logo} alt="TechBridge" className="h-8 sm:h-10 w-auto rounded-md" />
           </a>
 
@@ -97,7 +97,7 @@ const Navbar = () => {
       </motion.nav>
 
       {/* Mobile menu - portaled to body root for correct z-index */}
-      {createPortal(
+      {typeof document !== "undefined" && createPortal(
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -110,7 +110,7 @@ const Navbar = () => {
             >
               {/* Top bar area with logo and close */}
               <div className="flex items-center justify-between h-14 px-4 border-b border-border">
-                <a href="#home" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
+                <a href="/#home" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
                   <img src={logo} alt="TechBridge" className="h-8 w-auto rounded-md" />
                 </a>
                 <button
