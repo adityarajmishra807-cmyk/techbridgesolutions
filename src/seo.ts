@@ -1,7 +1,7 @@
 // Route-specific SEO metadata shared by prerendering and client navigation.
 export const SITE_URL = "https://techbridgesolutions.co.in";
 export const SITE_NAME = "TechBridge Solutions";
-export const SHARE_IMAGE = `${SITE_URL}/assets/techbridge-logo-DDipXi3p.png`;
+export const SHARE_IMAGE = `${SITE_URL}/techbridge-share.jpg`;
 export const LOGO_URL = `${SITE_URL}/favicon.svg`;
 export interface RouteSeo { title: string; description: string; }
 const SUFFIX = `| ${SITE_NAME}`;
