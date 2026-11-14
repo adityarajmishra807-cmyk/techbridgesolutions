@@ -56,7 +56,7 @@ const CTASection = () => {
               { icon: Phone, label: "Phone", value: "+91 88008 83727", href: "tel:+918800883727" },
               { icon: MessageCircle, label: "WhatsApp", value: "+91 88008 83727", href: WHATSAPP_URL },
               { icon: Mail, label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
-              { icon: MapPin, label: "Service Area", value: "Pan India Coverage", href: "#" },
+              { icon: MapPin, label: "Service Area", value: "UP • Bihar • Delhi • Uttarakhand", href: "#" },
             ].map((item, i) => (
               <motion.a
                 key={item.label}

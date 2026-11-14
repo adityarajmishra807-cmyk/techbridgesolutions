@@ -6,7 +6,7 @@ import classroomImg from "@/assets/classroom.png";
 const values = [
   { icon: Shield, title: "Safety First", desc: "Rounded edges, high-quality fittings, and layouts planned for safe movement." },
   { icon: Lightbulb, title: "Innovation", desc: "Modern, future-ready designs that inspire curiosity and exploration." },
-  { icon: Wrench, title: "Durability", desc: "Heavy-duty construction with premium finishes built to last decades." },
+  { icon: Wrench, title: "Durability", desc: "Product choices consider durability and everyday use in school environments." },
   { icon: GraduationCap, title: "End-to-End", desc: "Complete design, supply, and installation — one partner for everything." },
 ];
 
@@ -29,10 +29,10 @@ const AboutSection = () => {
               <span className="text-gradient-warm">Innovation</span> in Education
             </h2>
             <p className="font-body text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8">
-              TechBridge is your trusted partner in creating modern, child-friendly, and future-ready learning spaces. We specialise in providing high-quality school furniture, kids' play materials & toys, outdoor swings, indoor & outdoor play courts, classroom boards, STEM lab setups, computer labs, and a wide range of essential educational supplies.
+              TechBridge Solutions supports schools with laboratory equipment and wider campus infrastructure. Its listed solutions include physics, chemistry, maths, biology, computer and composite science labs, alongside school furniture, classroom boards, play materials, sports courts, solar power solutions and other educational supplies.
             </p>
             <p className="font-body text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed">
-              With a focus on safety, innovation, and durability, TechBridge delivers end-to-end solutions tailored to the needs of preschools, primary schools, and senior institutions.
+              Based in Gorakhpur, TechBridge works with school infrastructure requirements across Uttar Pradesh, Bihar, Delhi and Uttarakhand. Equipment selection should be matched to the school's classes, practical programme, available space and existing inventory.
             </p>
           </motion.div>
 
