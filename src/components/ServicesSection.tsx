@@ -88,9 +88,14 @@ const ServicesSection = () => {
 
         <div className="mt-8 sm:mt-10 text-center">
           <p className="font-body text-sm sm:text-base text-secondary-foreground/55 mb-2">Planning a new or upgraded school laboratory?</p>
-          <Link to="/guides/school-laboratory-setup-checklist" className="inline-flex items-center gap-2 font-body text-sm font-semibold text-primary hover:underline">
-            Read the school laboratory setup checklist <ArrowRight className="w-4 h-4" />
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
+            <Link to="/guides/school-laboratory-setup-checklist" className="inline-flex items-center gap-2 font-body text-sm font-semibold text-primary hover:underline">
+              Read the school laboratory setup checklist <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link to="/guides/school-computer-lab-setup" className="inline-flex items-center gap-2 font-body text-sm font-semibold text-primary hover:underline">
+              Read the computer lab setup guide <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
 
         <motion.div

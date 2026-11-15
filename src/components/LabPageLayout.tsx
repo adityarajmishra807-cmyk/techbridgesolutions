@@ -17,6 +17,7 @@ interface LabPageProps {
   planningDescription: string;
   planningChecks: string[];
   faqs: { question: string; answer: string }[];
+  relatedGuide?: { to: string; label: string };
   subtitle: string;
   description: string;
   heroImage: string;
@@ -34,6 +35,7 @@ const LabPageLayout = ({
   planningDescription,
   planningChecks,
   faqs,
+  relatedGuide,
   subtitle,
   description,
   heroImage,
@@ -106,6 +108,13 @@ const LabPageLayout = ({
           >
             {description}
           </motion.p>
+          {relatedGuide && (
+            <div className="mt-5">
+              <Link to={relatedGuide.to} className="inline-flex items-center rounded-lg border border-primary/40 bg-primary/10 px-4 py-2.5 font-body text-sm font-semibold text-primary hover:bg-primary/15 transition-colors">
+                {relatedGuide.label} →
+              </Link>
+            </div>
+          )}
         </div>
       </section>
 

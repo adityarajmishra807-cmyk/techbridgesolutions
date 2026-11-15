@@ -96,6 +96,7 @@ const SchoolLabSetupGuide = () => (
                     <h3 className="font-display text-lg font-semibold text-foreground mb-2">Computer laboratory</h3>
                     <p className="font-body text-sm text-muted-foreground leading-relaxed">Plan student and teacher workstations, monitors and peripherals, LAN or Wi-Fi, network equipment, internet connectivity, UPS and power protection, computer furniture, software licensing, cyber safety and maintenance access. Size the configuration around the school's actual teaching model and applicable affiliation rules.</p>
                     <Link to="/labs/computer" className="inline-flex mt-3 text-sm font-semibold text-primary hover:underline">Explore computer lab setup →</Link>
+                    <p className="font-body text-sm text-muted-foreground leading-relaxed mt-3">For workstation counts, CBSE digital infrastructure, networking, UPS and procurement, read the dedicated <Link to="/guides/school-computer-lab-setup" className="font-semibold text-primary hover:underline">school computer lab setup guide</Link>.</p>
                   </div>
                   <div className="p-5 rounded-xl border border-border bg-card">
                     <h3 className="font-display text-lg font-semibold text-foreground mb-2">Composite science laboratory</h3>

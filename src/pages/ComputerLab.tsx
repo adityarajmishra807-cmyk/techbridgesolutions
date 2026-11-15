@@ -8,6 +8,7 @@ const ComputerLab = () => (
     subtitle="Digital Infrastructure"
     description="Computer lab setup for schools with workstations, networking, UPS and power backup, peripherals, software and computer furniture. Configure the lab to class strength and available space."
     h1Title="Computer Lab Setup for Schools"
+    relatedGuide={{ to: "/guides/school-computer-lab-setup", label: "Read the school computer lab setup guide" }}
     planningTitle="Plan a School Computer Lab Around Users, Power and Connectivity"
     planningDescription="A computer lab should be configured around how students will use the machines, the number of simultaneous users and the room's power and network capacity. Decide the workstation model before finalising hardware, furniture and backup requirements."
     planningChecks={[
