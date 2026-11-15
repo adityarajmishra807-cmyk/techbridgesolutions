@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ContactCTA from "@/components/ContactCTA";
 
 const sections = [
   ["lab-model", "Choose the lab model"],
@@ -349,6 +350,8 @@ const ScienceLabEquipmentGuide = () => (
         </div>
       </section>
     </main>
+
+    <ContactCTA subject="school science laboratory" message="Hello TechBridge, I am planning a school science laboratory. Please help me prepare a subject-wise equipment schedule, quantities and BOQ for a quotation." />
     <Footer />
   </div>
 );
