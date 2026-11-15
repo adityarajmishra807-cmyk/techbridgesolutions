@@ -296,7 +296,8 @@ const SchoolLabSetupGuide = () => (
                   ["cbse", "Check CBSE requirements"],
                   ["safety", "Plan safety"],
                   ["procurement", "Prepare the BOQ"],
-                  ["enquiry-brief", "Prepare an enquiry brief"],\n                  ["commissioning", "Inspect & commission"],
+                  ["enquiry-brief", "Prepare an enquiry brief"],
+                  ["commissioning", "Inspect & commission"],
                   ["checklist", "Setup checklist"],
                   ["faqs", "FAQs"],
                 ].map(([id, label]) => (
