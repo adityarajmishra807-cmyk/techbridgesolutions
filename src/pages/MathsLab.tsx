@@ -32,6 +32,13 @@ const MathsLab = () => (
       "Visual exploration of mathematical concepts and relationships",
       "Practical resources for reasoning, patterns and problem-solving activities",
     ]}
+    safetyNotes={[
+      "Check models, geoboards, measuring tools and activity kits for damage before classroom use",
+      "Store compasses, cutters and other pointed tools securely, and supervise their use",
+      "Keep small counters, beads and puzzle pieces organised so they are not misplaced or left on walkways",
+      "Use measuring and demonstration tools on stable surfaces, and keep work areas clear during activities",
+      "Return kits to labelled storage after use and keep the room tidy to prevent trips and equipment loss",
+    ]}
     equipment={[
       {
         category: "Geometry & Shapes",
