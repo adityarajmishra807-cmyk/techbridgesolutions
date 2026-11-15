@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
-
-const WHATSAPP_URL = "https://wa.me/918800883727?text=Hi%20TechBridge%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.";
+import { useLocation } from "react-router-dom";
+import { getPageInquiryMessage, getWhatsAppUrl } from "@/lib/contact";
 
 const WhatsAppFAB = () => {
+  const { pathname } = useLocation();
+  const whatsappUrl = getWhatsAppUrl(getPageInquiryMessage(pathname));
+
   return (
     <motion.a
-      href={WHATSAPP_URL}
+      href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0 }}
