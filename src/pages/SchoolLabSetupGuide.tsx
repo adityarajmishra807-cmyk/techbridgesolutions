@@ -288,6 +288,13 @@ const SchoolLabSetupGuide = () => (
                 ))}
               </ul>
             </div>
+            <div className="p-5 rounded-2xl border border-border bg-card">
+              <h2 className="font-display text-lg font-bold text-foreground mb-3">Related planning guides</h2>
+              <ul className="space-y-3">
+                <li><Link to="/guides/science-lab-equipment-planning" className="font-body text-sm text-primary hover:underline">Science lab equipment planning guide →</Link></li>
+                <li><Link to="/guides/school-computer-lab-setup" className="font-body text-sm text-primary hover:underline">School computer lab setup guide →</Link></li>
+              </ul>
+            </div>
           </aside>
         </div>
       </section>
