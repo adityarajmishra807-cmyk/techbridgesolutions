@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ContactCTA from "@/components/ContactCTA";
 
 const labLinks = [
   { label: "Physics lab setup", to: "/labs/physics" },
@@ -299,6 +300,8 @@ const SchoolLabSetupGuide = () => (
         </div>
       </section>
     </main>
+
+    <ContactCTA subject="School laboratory setup" message="Hello TechBridge, I am planning a school laboratory setup. I would like help reviewing my requirements, equipment quantities and preparing a subject-wise BOQ and quotation." />
 
     <Footer />
   </div>
