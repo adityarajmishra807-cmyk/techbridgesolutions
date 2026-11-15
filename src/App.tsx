@@ -11,6 +11,7 @@ import MathsLab from "./pages/MathsLab.tsx";
 import BiologyLab from "./pages/BiologyLab.tsx";
 import ComputerLab from "./pages/ComputerLab.tsx";
 import CompositeLab from "./pages/CompositeLab.tsx";
+import SchoolLabSetupGuide from "./pages/SchoolLabSetupGuide.tsx";
 import RouteMeta from "./components/RouteMeta.tsx";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ export const AppRoutes = () => (
       <Route path="/labs/biology" element={<BiologyLab />} />
       <Route path="/labs/computer" element={<ComputerLab />} />
       <Route path="/labs/composite" element={<CompositeLab />} />
+      <Route path="/guides/school-laboratory-setup-checklist" element={<SchoolLabSetupGuide />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </>

@@ -13,6 +13,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
   "/labs/biology": { title: `Biology Lab Equipment for Schools ${SUFFIX}`, description: "Biology lab equipment for schools, including microscopes, prepared slides, specimen jars, glassware, anatomical models, charts and safety essentials." },
   "/labs/computer": { title: `Computer Lab Setup for Schools ${SUFFIX}`, description: "Computer lab setup for schools with workstations, networking, UPS and power backup, peripherals, software and computer furniture." },
   "/labs/composite": { title: `Composite Science Lab Setup for Schools ${SUFFIX}`, description: "Composite science lab setup for schools combining physics, chemistry and biology equipment, glassware, models, storage and safety essentials." },
+  "/guides/school-laboratory-setup-checklist": { title: `School Laboratory Setup Checklist ${SUFFIX}`, description: "A practical school lab setup checklist covering room planning, physics, chemistry, biology, maths and computer lab equipment, CBSE requirements, safety and procurement." },
 };
 export const ROUTES = Object.keys(ROUTE_SEO);
 export const NOT_FOUND_SEO: RouteSeo = { title: `Page not found ${SUFFIX}`, description: "The page you requested could not be found." };
@@ -29,6 +30,18 @@ export const renderHeadTags = (pathname: string): string => {
   else if (seo.canonical) {
     lines.push(`<link rel="canonical" href="${seo.canonical}" />`, '<meta property="og:type" content="website" />', `<meta property="og:site_name" content="${SITE_NAME}" />`, '<meta property="og:locale" content="en_IN" />', `<meta property="og:url" content="${seo.canonical}" />`, `<meta property="og:title" content="${escapeHtml(seo.title)}" />`, `<meta property="og:description" content="${escapeHtml(seo.description)}" />`, `<meta property="og:image" content="${SHARE_IMAGE}" />`, '<meta name="twitter:card" content="summary_large_image" />', `<meta name="twitter:title" content="${escapeHtml(seo.title)}" />`, `<meta name="twitter:description" content="${escapeHtml(seo.description)}" />`, `<meta name="twitter:image" content="${SHARE_IMAGE}" />`);
     if (normalizePath(pathname) === "/") lines.push(jsonLd({ "@context": "https://schema.org", "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/`, logo: LOGO_URL, email: "techbridgesolutions2k25@gmail.com", telephone: "+918800883727" }), jsonLd({ "@context": "https://schema.org", "@type": "WebSite", name: SITE_NAME, url: `${SITE_URL}/` }));
+    if (normalizePath(pathname) === "/guides/school-laboratory-setup-checklist") lines.push(jsonLd({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "School Laboratory Setup Checklist: Plan Space, Equipment and Safety",
+      description: "A practical school lab setup checklist covering room planning, subject-wise equipment, CBSE requirements, safety, procurement and commissioning.",
+      image: SHARE_IMAGE,
+      datePublished: "2026-11-15",
+      dateModified: "2026-11-15",
+      author: { "@type": "Organization", name: SITE_NAME },
+      publisher: { "@type": "Organization", name: SITE_NAME, logo: { "@type": "ImageObject", url: LOGO_URL } },
+      mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/guides/school-laboratory-setup-checklist` }
+    }));
   }
   return lines.map(line => `    ${line}`).join("\n");
 }
