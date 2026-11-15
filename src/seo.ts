@@ -15,6 +15,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
   "/labs/composite": { title: `Composite Science Lab Setup for Schools ${SUFFIX}`, description: "Composite science lab setup for schools combining physics, chemistry and biology equipment, glassware, models, storage and safety essentials." },
   "/guides/school-laboratory-setup-checklist": { title: `School Laboratory Setup Checklist ${SUFFIX}`, description: "A practical school lab setup checklist covering room planning, physics, chemistry, biology, maths and computer lab equipment, CBSE requirements, safety and procurement." },
   "/guides/school-computer-lab-setup": { title: `School Computer Lab Setup ${SUFFIX}`, description: "Plan a school computer lab with CBSE 2025 requirements, 40-system minimum, 1:18 ratio, hardware, LAN, UPS, furniture, software, cyber safety and procurement." },
+  "/guides/science-lab-equipment-planning": { title: `Science Lab Equipment Planning for Schools ${SUFFIX}`, description: "Plan school physics, chemistry, biology and composite science lab equipment using CBSE SOP references, 40-student schedules, infrastructure, safety and BOQ guidance." },
 };
 export const ROUTES = Object.keys(ROUTE_SEO);
 export const NOT_FOUND_SEO: RouteSeo = { title: `Page not found ${SUFFIX}`, description: "The page you requested could not be found." };
@@ -54,6 +55,18 @@ export const renderHeadTags = (pathname: string): string => {
       author: { "@type": "Organization", name: SITE_NAME },
       publisher: { "@type": "Organization", name: SITE_NAME, logo: { "@type": "ImageObject", url: LOGO_URL } },
       mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/guides/school-computer-lab-setup` }
+    }));
+    if (normalizePath(pathname) === "/guides/science-lab-equipment-planning") lines.push(jsonLd({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "Science Lab Equipment for Schools: Physics, Chemistry, Biology and Composite Labs",
+      description: "A practical school science laboratory equipment planning guide covering Physics, Chemistry, Biology and Composite Science apparatus, quantities, infrastructure, safety and procurement.",
+      image: SHARE_IMAGE,
+      datePublished: "2026-11-15",
+      dateModified: "2026-11-15",
+      author: { "@type": "Organization", name: SITE_NAME },
+      publisher: { "@type": "Organization", name: SITE_NAME, logo: { "@type": "ImageObject", url: LOGO_URL } },
+      mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/guides/science-lab-equipment-planning` }
     }));
   }
   return lines.map(line => `    ${line}`).join("\n");

@@ -95,6 +95,9 @@ const ServicesSection = () => {
             <Link to="/guides/school-computer-lab-setup" className="inline-flex items-center gap-2 font-body text-sm font-semibold text-primary hover:underline">
               Read the computer lab setup guide <ArrowRight className="w-4 h-4" />
             </Link>
+            <Link to="/guides/science-lab-equipment-planning" className="inline-flex items-center gap-2 font-body text-sm font-semibold text-primary hover:underline">
+              Read the science lab equipment planning guide <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
 

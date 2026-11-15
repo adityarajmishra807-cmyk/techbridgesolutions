@@ -115,6 +115,11 @@ const LabPageLayout = ({
               </Link>
             </div>
           )}
+          <div className="mt-3">
+            <Link to="/guides/science-lab-equipment-planning" className="inline-flex items-center font-body text-sm font-semibold text-primary/90 hover:underline">
+              Explore the school science lab equipment planning guide →
+            </Link>
+          </div>
         </div>
       </section>
 
