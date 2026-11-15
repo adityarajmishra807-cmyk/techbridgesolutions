@@ -329,6 +329,7 @@ const SchoolComputerLabGuide = () => (
                 <li><Link to="/guides/school-laboratory-setup-checklist" className="font-body text-sm text-secondary-foreground/70 hover:text-primary transition-colors">School laboratory setup checklist →</Link></li>
                 <li><Link to="/labs/physics" className="font-body text-sm text-secondary-foreground/70 hover:text-primary transition-colors">Physics lab setup →</Link></li>
                 <li><Link to="/labs/chemistry" className="font-body text-sm text-secondary-foreground/70 hover:text-primary transition-colors">Chemistry lab equipment →</Link></li>
+                <li><Link to="/guides/science-lab-equipment-planning" className="font-body text-sm text-secondary-foreground/70 hover:text-primary transition-colors">Science lab equipment planning guide →</Link></li>
               </ul>
             </div>
             <div className="p-5 rounded-2xl border border-border bg-card">
