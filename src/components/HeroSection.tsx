@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle, Mail } from "lucide-react";
 import heroImg from "@/assets/hero-lab.jpg";
 import AnimatedCounter from "./AnimatedCounter";
+import { getWhatsAppUrl } from "@/lib/contact";
 
-const WHATSAPP_URL = "https://wa.me/918800883727?text=Hi%20TechBridge%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.";
+const WHATSAPP_URL = getWhatsAppUrl("Hello TechBridge, I am planning a school laboratory or educational infrastructure project. I would like to discuss my requirements and get a quotation.");
 const EMAIL = "techbridgesolutions2k25@gmail.com";
 
 const HeroSection = () => {
