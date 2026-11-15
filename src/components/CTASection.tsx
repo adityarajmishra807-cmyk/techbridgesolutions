@@ -1,8 +1,9 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
+import { getWhatsAppUrl } from "@/lib/contact";
 
-const WHATSAPP_URL = "https://wa.me/918800883727?text=Hi%20TechBridge%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.";
+const WHATSAPP_URL = getWhatsAppUrl("Hello TechBridge, I would like to discuss a school laboratory or educational infrastructure project. Please guide me on the requirements and quotation process.");
 const EMAIL = "techbridgesolutions2k25@gmail.com";
 
 const CTASection = () => {
