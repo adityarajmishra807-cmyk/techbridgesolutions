@@ -85,10 +85,10 @@ const Gallery = () => {
           >
             <span className="text-xs font-body font-semibold tracking-widest uppercase text-primary mb-3 sm:mb-4 block">Gallery</span>
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground leading-tight mb-3 sm:mb-4">
-              Our <span className="text-gradient-warm">Installations</span>
+              School <span className="text-gradient-warm">Infrastructure</span>
             </h2>
             <p className="font-body text-secondary-foreground/60 text-sm sm:text-base md:text-lg">
-              A showcase of completed school infrastructure projects across India.
+              A visual overview of laboratory, classroom and campus infrastructure categories available for schools.
             </p>
           </motion.div>
 
