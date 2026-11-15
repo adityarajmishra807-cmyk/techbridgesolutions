@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ContactCTA from "@/components/ContactCTA";
 
 const sections = [
   ["requirements", "Define capacity and learning needs"],
@@ -340,6 +341,8 @@ const SchoolComputerLabGuide = () => (
         </div>
       </section>
     </main>
+
+    <ContactCTA subject="school computer lab" message="Hello TechBridge, I am planning a computer lab for my school. Please help me scope the systems, networking, power, furniture and prepare an itemised quotation." />
 
     <Footer />
   </div>
