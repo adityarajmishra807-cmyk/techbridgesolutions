@@ -85,10 +85,10 @@ const Gallery = () => {
           >
             <span className="text-xs font-body font-semibold tracking-widest uppercase text-primary mb-3 sm:mb-4 block">Gallery</span>
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground leading-tight mb-3 sm:mb-4">
-              School <span className="text-gradient-warm">Infrastructure</span>
+              Our <span className="text-gradient-warm">Installations</span>
             </h2>
             <p className="font-body text-secondary-foreground/60 text-sm sm:text-base md:text-lg">
-              A visual overview of laboratory, classroom and campus infrastructure categories available for schools.
+              A showcase of school laboratory, classroom and campus infrastructure installations by TechBridge Solutions.
             </p>
           </motion.div>
 
