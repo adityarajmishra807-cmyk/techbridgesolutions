@@ -86,6 +86,13 @@ const ServicesSection = () => {
           })}
         </div>
 
+        <div className="mt-8 sm:mt-10 text-center">
+          <p className="font-body text-sm sm:text-base text-secondary-foreground/55 mb-2">Planning a new or upgraded school laboratory?</p>
+          <Link to="/guides/school-laboratory-setup-checklist" className="inline-flex items-center gap-2 font-body text-sm font-semibold text-primary hover:underline">
+            Read the school laboratory setup checklist <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
