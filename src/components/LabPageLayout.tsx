@@ -6,8 +6,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import WhatsAppFAB from "./WhatsAppFAB";
 import ParallaxImage from "./ParallaxImage";
-
-const WHATSAPP_URL = "https://wa.me/918800883727?text=Hi%20TechBridge%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.";
+import { getWhatsAppUrl } from "@/lib/contact";
 const EMAIL = "techbridgesolutions2k25@gmail.com";
 
 interface LabPageProps {
@@ -340,7 +339,7 @@ const LabPageLayout = ({
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a
-              href={WHATSAPP_URL}
+              href={getWhatsAppUrl(`Hello TechBridge, I am interested in planning a ${title} for my school. Please help me with the equipment requirements, quantities and a project-specific quotation.`)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold font-body text-lg hover:shadow-[var(--shadow-glow)] hover:scale-[1.02] transition-all duration-200 active:scale-[0.98]"
