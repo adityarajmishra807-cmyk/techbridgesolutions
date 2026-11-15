@@ -193,8 +193,33 @@ const SchoolLabSetupGuide = () => (
                 </p>
               </section>
 
+              <section id="enquiry-brief" className="scroll-mt-24">
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground mb-4">7. Prepare a quotation-ready school requirement brief</h2>
+                <p className="font-body text-muted-foreground leading-relaxed mb-5">
+                  A project-specific proposal is easier to prepare when the school shares its requirements before requesting a quotation. You do not need a finished BOQ to start the discussion. A short brief, room details and the intended practical programme are a useful starting point.
+                </p>
+                <div className="grid sm:grid-cols-2 gap-3 mb-5">
+                  {[
+                    ["School and location", "School name, city, state and the best contact person for the project."],
+                    ["Laboratory requirement", "Physics, chemistry, biology, maths, computer, composite science or a combination."],
+                    ["Classes and student strength", "Classes using the lab, approximate student numbers and how practical groups will be scheduled."],
+                    ["Room information", "Approximate room dimensions, site photographs, floor plan and available water, power or network connections."],
+                    ["Existing equipment", "A list or photographs of usable apparatus, furniture and infrastructure already available."],
+                    ["Project scope and timeline", "New setup or upgrade, supply-only or broader work required, and the expected project schedule."]
+                  ].map(([label, detail]) => (
+                    <div key={label} className="rounded-xl border border-border bg-card p-4">
+                      <h3 className="font-display font-semibold text-foreground mb-1">{label}</h3>
+                      <p className="font-body text-sm text-muted-foreground leading-relaxed">{detail}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="font-body text-muted-foreground leading-relaxed">
+                  TechBridge can use this information to understand the scope, review equipment categories and quantities, and discuss the next steps for a project-specific quotation. Final specifications and commercial terms should be confirmed against the school's requirements and the agreed scope.
+                </p>
+              </section>
+
               <section id="commissioning" className="scroll-mt-24">
-                <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground mb-4">7. Inspect and commission the laboratory before use</h2>
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground mb-4">8. Inspect and commission the laboratory before use</h2>
                 <p className="font-body text-muted-foreground leading-relaxed mb-5">
                   Before the first practical class, check the delivered items against the BOQ and confirm that the room is ready for supervised use.
                 </p>
@@ -271,7 +296,7 @@ const SchoolLabSetupGuide = () => (
                   ["cbse", "Check CBSE requirements"],
                   ["safety", "Plan safety"],
                   ["procurement", "Prepare the BOQ"],
-                  ["commissioning", "Inspect & commission"],
+                  ["enquiry-brief", "Prepare an enquiry brief"],\n                  ["commissioning", "Inspect & commission"],
                   ["checklist", "Setup checklist"],
                   ["faqs", "FAQs"],
                 ].map(([id, label]) => (
