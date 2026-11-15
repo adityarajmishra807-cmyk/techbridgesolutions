@@ -65,6 +65,7 @@ const Footer = () => {
                 { label: "Contact", href: "/#contact" },
                 { label: "School Lab Setup Guide", href: "/guides/school-laboratory-setup-checklist" },
                 { label: "Computer Lab Setup Guide", href: "/guides/school-computer-lab-setup" },
+                { label: "Science Lab Equipment Guide", href: "/guides/science-lab-equipment-planning" },
               ].map((item) => (
                 <li key={item.label}>
                   <a href={item.href} className="font-body text-xs sm:text-sm text-secondary-foreground/50 hover:text-primary transition-colors">{item.label}</a>

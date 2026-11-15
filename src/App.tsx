@@ -13,6 +13,7 @@ import ComputerLab from "./pages/ComputerLab.tsx";
 import CompositeLab from "./pages/CompositeLab.tsx";
 import SchoolLabSetupGuide from "./pages/SchoolLabSetupGuide.tsx";
 import SchoolComputerLabGuide from "./pages/SchoolComputerLabGuide.tsx";
+import ScienceLabEquipmentGuide from "./pages/SchoolScienceLabEquipmentGuide.tsx";
 import RouteMeta from "./components/RouteMeta.tsx";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ export const AppRoutes = () => (
       <Route path="/labs/composite" element={<CompositeLab />} />
       <Route path="/guides/school-laboratory-setup-checklist" element={<SchoolLabSetupGuide />} />
       <Route path="/guides/school-computer-lab-setup" element={<SchoolComputerLabGuide />} />
+      <Route path="/guides/science-lab-equipment-planning" element={<ScienceLabEquipmentGuide />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </>
