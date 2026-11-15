@@ -23,24 +23,24 @@ import labIntro from "@/assets/lab-intro.png";
 import labIntro2 from "@/assets/lab-intro-2.png";
 
 const galleryItems = [
-  { src: labSetup, title: "Lab Table Units", category: "Lab Infrastructure" },
-  { src: physicsLab, title: "Physics Lab", category: "Science Labs" },
-  { src: physicsLabSetup, title: "Physics Lab Setup", category: "Science Labs" },
-  { src: chemistryLab, title: "Chemistry Lab", category: "Science Labs" },
-  { src: chemistryLabSetup, title: "Chemistry Lab Setup", category: "Science Labs" },
-  { src: bioLabSetup, title: "Biology Lab Setup", category: "Science Labs" },
-  { src: classroom, title: "Smart Classroom", category: "Classrooms" },
-  { src: kindergarten, title: "Kindergarten Playroom", category: "Early Education" },
-  { src: library, title: "Library Setup", category: "Learning Spaces" },
-  { src: sportsCourtImg, title: "Sports Court", category: "Sports" },
-  { src: sportsCourt1, title: "Indoor Court", category: "Sports" },
-  { src: sportsCourt2, title: "Outdoor Court", category: "Sports" },
-  { src: sportsCourt3, title: "Multi-Sport Court", category: "Sports" },
-  { src: sportsCourt4, title: "Court Equipment", category: "Sports" },
-  { src: solarImg, title: "Solar Power Plant", category: "Green Energy" },
-  { src: furnitureImg, title: "School Furniture", category: "Furniture" },
-  { src: labIntro, title: "Lab Infrastructure", category: "Lab Infrastructure" },
-  { src: labIntro2, title: "Teacher Demo Table", category: "Lab Infrastructure" },
+  { src: labSetup, title: "School Laboratory Table Units", alt: "Laboratory table units in a school lab installation", category: "Lab Infrastructure" },
+  { src: physicsLab, title: "School Physics Laboratory", alt: "Physics laboratory installation for school practical work", category: "Science Labs" },
+  { src: physicsLabSetup, title: "Physics Laboratory Setup", alt: "School physics lab setup and equipment arrangement", category: "Science Labs" },
+  { src: chemistryLab, title: "School Chemistry Laboratory", alt: "Chemistry laboratory installation for school practical work", category: "Science Labs" },
+  { src: chemistryLabSetup, title: "Chemistry Laboratory Setup", alt: "School chemistry lab setup and work area", category: "Science Labs" },
+  { src: bioLabSetup, title: "Biology Laboratory Setup", alt: "Biology laboratory setup for school learning activities", category: "Science Labs" },
+  { src: classroom, title: "Smart Classroom", alt: "School smart classroom learning space", category: "Classrooms" },
+  { src: kindergarten, title: "Kindergarten Playroom", alt: "Kindergarten classroom and playroom setup", category: "Early Education" },
+  { src: library, title: "School Library Setup", alt: "School library furniture and learning space", category: "Learning Spaces" },
+  { src: sportsCourtImg, title: "School Sports Court", alt: "Sports court infrastructure for a school campus", category: "Sports" },
+  { src: sportsCourt1, title: "Indoor Sports Court", alt: "Indoor sports court setup", category: "Sports" },
+  { src: sportsCourt2, title: "Outdoor Sports Court", alt: "Outdoor sports court setup", category: "Sports" },
+  { src: sportsCourt3, title: "Multi-Sport Court", alt: "Multi-sport court facility on a school campus", category: "Sports" },
+  { src: sportsCourt4, title: "Sports Court Equipment", alt: "Equipment for a school sports court", category: "Sports" },
+  { src: solarImg, title: "School Solar Power Plant", alt: "Solar power installation for school infrastructure", category: "Green Energy" },
+  { src: furnitureImg, title: "School Furniture", alt: "Furniture for school classrooms and learning spaces", category: "Furniture" },
+  { src: labIntro, title: "School Laboratory Infrastructure", alt: "School laboratory infrastructure and practical learning space", category: "Lab Infrastructure" },
+  { src: labIntro2, title: "Teacher Demonstration Table", alt: "Teacher demonstration table in a school laboratory", category: "Lab Infrastructure" },
 ];
 
 const categories = ["All", ...Array.from(new Set(galleryItems.map((i) => i.category)))];
@@ -130,7 +130,7 @@ const Gallery = () => {
                 >
                   <img
                     src={item.src}
-                    alt={item.title}
+                    alt={item.alt}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
                     loading="lazy"
                   />
@@ -192,7 +192,7 @@ const Gallery = () => {
             >
               <img
                 src={filtered[lightboxIndex].src}
-                alt={filtered[lightboxIndex].title}
+                alt={filtered[lightboxIndex].alt}
                 className="max-w-full max-h-[70vh] sm:max-h-[75vh] object-contain rounded-lg shadow-2xl"
               />
               <div className="mt-3 sm:mt-4 text-center">
