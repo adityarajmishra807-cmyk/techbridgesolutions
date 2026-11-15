@@ -15,16 +15,16 @@ import labIntroImg from "@/assets/lab-intro.png";
 const WHATSAPP_URL = "https://wa.me/918800883727?text=Hi%20TechBridge%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.";
 
 const products = [
-  { image: labSetup, title: "Lab Table Units", desc: "Heavy-duty powder-coated steel frame with chemical-resistant laminated tops.", category: "Lab Infrastructure" },
-  { image: physicsLab, title: "Physics Lab Setup", desc: "Complete setup with optical benches, meters, electrical equipment for 40+ students.", category: "Science Labs" },
-  { image: kindergarten, title: "Kindergarten Playroom", desc: "Safe, colorful play areas with age-appropriate furniture and educational toys.", category: "Early Education" },
-  { image: library, title: "Library Solutions", desc: "Full library setups with bookshelves, reading tables, and organized cataloguing.", category: "Learning Spaces" },
-  { image: sportsImg, title: "Sports Courts", desc: "Professional indoor and outdoor courts for basketball, badminton, volleyball.", category: "Sports" },
-  { image: solarImg, title: "Solar Power Plants", desc: "Rooftop solar installations helping schools reduce energy costs.", category: "Green Energy" },
-  { image: sportsImg1, title: "Indoor Courts", desc: "High-quality indoor surfaces for year-round multi-sport training.", category: "Sports" },
-  { image: sportsImg2, title: "Outdoor Courts", desc: "Durable weather-resistant outdoor court installations.", category: "Sports" },
-  { image: furnitureImg, title: "School Furniture", desc: "Ergonomic benches, desks, chairs and almirahs for comfort and durability.", category: "Furniture" },
-  { image: labIntroImg, title: "Teacher Demo Table", desc: "6×3 ft tabletop for demonstrations with built-in drawers and power access.", category: "Lab Infrastructure" },
+  { image: labSetup, title: "Lab Table Units", desc: "Laboratory workstations and table units for school practical spaces.", category: "Lab Infrastructure" },
+  { image: physicsLab, title: "Physics Lab Setup", desc: "Equipment and workspace options for school physics practicals and demonstrations.", category: "Science Labs" },
+  { image: kindergarten, title: "Kindergarten Playroom", desc: "Furniture, play equipment and learning materials for early education spaces.", category: "Early Education" },
+  { image: library, title: "Library Solutions", desc: "Shelving, reading furniture and storage options for school libraries.", category: "Learning Spaces" },
+  { image: sportsImg, title: "Sports Courts", desc: "Sports court and activity-space solutions for school campuses.", category: "Sports" },
+  { image: solarImg, title: "Solar Power Plants", desc: "Solar power options for schools considering campus energy solutions.", category: "Green Energy" },
+  { image: sportsImg1, title: "Indoor Courts", desc: "Indoor sports surfaces and facilities for school activity spaces.", category: "Sports" },
+  { image: sportsImg2, title: "Outdoor Courts", desc: "Outdoor sports court options for school campuses.", category: "Sports" },
+  { image: furnitureImg, title: "School Furniture", desc: "Classroom and campus furniture options for everyday school use.", category: "Furniture" },
+  { image: labIntroImg, title: "Teacher Demo Table", desc: "Teacher demonstration tables and supporting laboratory furniture.", category: "Lab Infrastructure" },
 ];
 
 const ProductShowcase = () => {
