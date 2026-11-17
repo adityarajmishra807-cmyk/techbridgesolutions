@@ -45,7 +45,7 @@ const ProductShowcase = () => {
             Crafted for <span className="text-gradient-warm">Excellence</span>
           </h2>
           <p className="font-body text-muted-foreground text-sm sm:text-base md:text-lg">
-            Every product is designed with safety, durability and aesthetics in mind.
+            Explore examples of school laboratory and campus infrastructure solutions. Share your requirements to discuss suitable options.
           </p>
         </motion.div>
 
@@ -67,6 +67,7 @@ const ProductShowcase = () => {
                   alt={product.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
