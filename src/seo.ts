@@ -31,7 +31,36 @@ export const renderHeadTags = (pathname: string): string => {
   if (seo.noindex) lines.push('<meta name="robots" content="noindex, follow" />');
   else if (seo.canonical) {
     lines.push(`<link rel="canonical" href="${seo.canonical}" />`, '<meta property="og:type" content="website" />', `<meta property="og:site_name" content="${SITE_NAME}" />`, '<meta property="og:locale" content="en_IN" />', `<meta property="og:url" content="${seo.canonical}" />`, `<meta property="og:title" content="${escapeHtml(seo.title)}" />`, `<meta property="og:description" content="${escapeHtml(seo.description)}" />`, `<meta property="og:image" content="${SHARE_IMAGE}" />`, '<meta name="twitter:card" content="summary_large_image" />', `<meta name="twitter:title" content="${escapeHtml(seo.title)}" />`, `<meta name="twitter:description" content="${escapeHtml(seo.description)}" />`, `<meta name="twitter:image" content="${SHARE_IMAGE}" />`);
-    if (normalizePath(pathname) === "/") lines.push(jsonLd({ "@context": "https://schema.org", "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/`, logo: LOGO_URL, email: "techbridgesolutions2k25@gmail.com", telephone: "+918800883727" }), jsonLd({ "@context": "https://schema.org", "@type": "WebSite", name: SITE_NAME, url: `${SITE_URL}/` }));
+    if (normalizePath(pathname) === "/") lines.push(jsonLd({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: `${SITE_URL}/`,
+      logo: LOGO_URL,
+      email: "techbridgesolutions2k25@gmail.com",
+      telephone: "+918800883727",
+      areaServed: [
+        { "@type": "AdministrativeArea", name: "Uttar Pradesh" },
+        { "@type": "AdministrativeArea", name: "Bihar" },
+        { "@type": "AdministrativeArea", name: "Delhi" },
+        { "@type": "AdministrativeArea", name: "Uttarakhand" }
+      ],
+      knowsAbout: [
+        "School laboratory equipment",
+        "Physics laboratory setup",
+        "Chemistry laboratory setup",
+        "Biology laboratory setup",
+        "Mathematics laboratory equipment",
+        "School computer lab setup",
+        "Composite science laboratories"
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+918800883727",
+        email: "techbridgesolutions2k25@gmail.com",
+        contactType: "sales"
+      }
+    }), jsonLd({ "@context": "https://schema.org", "@type": "WebSite", name: SITE_NAME, url: `${SITE_URL}/` }));
     if (normalizePath(pathname) === "/guides/school-laboratory-setup-checklist") lines.push(jsonLd({
       "@context": "https://schema.org",
       "@type": "Article",
