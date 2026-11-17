@@ -11,23 +11,23 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
           <div className="col-span-2 md:col-span-1">
             <img src={logo} alt="TechBridge" width={1281} height={1457} className="h-10 w-auto mb-4 rounded-md" style={{ filter: "brightness(0) invert(1)" }} />
-            <p className="font-body text-xs sm:text-sm text-secondary-foreground/50 leading-relaxed max-w-xs mb-4">
+            <p className="font-body text-xs sm:text-sm text-secondary-foreground/80 leading-relaxed max-w-xs mb-4">
               Bridging Ideas to Innovation in Education. Your trusted partner for modern school infrastructure.
             </p>
             <div className="space-y-2">
-              <a href="tel:+918800883727" className="flex items-center gap-2 font-body text-xs text-secondary-foreground/40 hover:text-primary transition-colors">
+              <a href="tel:+918800883727" className="flex items-center gap-2 font-body text-xs text-secondary-foreground/75 hover:text-primary transition-colors">
                 <Phone className="w-3 h-3 shrink-0" /> +91 88008 83727
               </a>
-              <a href={`mailto:${EMAIL}`} className="flex items-center gap-2 font-body text-xs text-secondary-foreground/40 hover:text-primary transition-colors">
+              <a href={`mailto:${EMAIL}`} className="flex items-center gap-2 font-body text-xs text-secondary-foreground/75 hover:text-primary transition-colors">
                 <Mail className="w-3 h-3 shrink-0" /> <span className="truncate">{EMAIL}</span>
               </a>
-              <span className="flex items-center gap-2 font-body text-xs text-secondary-foreground/40">
+              <span className="flex items-center gap-2 font-body text-xs text-secondary-foreground/75">
                 <MapPin className="w-3 h-3 shrink-0" /> Based in Gorakhpur · UP, Bihar, Delhi & Uttarakhand
               </span>
             </div>
           </div>
           <div>
-            <h4 className="font-display text-xs sm:text-sm font-semibold text-secondary-foreground mb-3 sm:mb-4">Lab Solutions</h4>
+            <h2 className="font-display text-xs sm:text-sm font-semibold text-secondary-foreground mb-3 sm:mb-4">Lab Solutions</h2>
             <ul className="space-y-2">
               {[
                 { label: "Physics Lab", to: "/labs/physics" },
@@ -38,23 +38,23 @@ const Footer = () => {
                 { label: "Composite Lab", to: "/labs/composite" },
               ].map((item) => (
                 <li key={item.label}>
-                  <Link to={item.to} className="font-body text-xs sm:text-sm text-secondary-foreground/50 hover:text-primary transition-colors">{item.label}</Link>
+                  <Link to={item.to} className="font-body text-xs sm:text-sm text-secondary-foreground/80 hover:text-primary transition-colors">{item.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <h4 className="font-display text-xs sm:text-sm font-semibold text-secondary-foreground mb-3 sm:mb-4">More Solutions</h4>
+            <h2 className="font-display text-xs sm:text-sm font-semibold text-secondary-foreground mb-3 sm:mb-4">More Solutions</h2>
             <ul className="space-y-2">
               {["Kindergarten", "Library", "Sports Courts", "Solar Power", "Boards", "Storage"].map((item) => (
                 <li key={item}>
-                  <a href="/#services" className="font-body text-xs sm:text-sm text-secondary-foreground/50 hover:text-primary transition-colors">{item}</a>
+                  <a href="/#services" className="font-body text-xs sm:text-sm text-secondary-foreground/80 hover:text-primary transition-colors">{item}</a>
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <h4 className="font-display text-xs sm:text-sm font-semibold text-secondary-foreground mb-3 sm:mb-4">Quick Links</h4>
+            <h2 className="font-display text-xs sm:text-sm font-semibold text-secondary-foreground mb-3 sm:mb-4">Quick Links</h2>
             <ul className="space-y-2">
               {[
                 { label: "Home", href: "/#home" },
@@ -68,14 +68,14 @@ const Footer = () => {
                 { label: "Science Lab Equipment Guide", href: "/guides/science-lab-equipment-planning" },
               ].map((item) => (
                 <li key={item.label}>
-                  <a href={item.href} className="font-body text-xs sm:text-sm text-secondary-foreground/50 hover:text-primary transition-colors">{item.label}</a>
+                  <a href={item.href} className="font-body text-xs sm:text-sm text-secondary-foreground/80 hover:text-primary transition-colors">{item.label}</a>
                 </li>
               ))}
             </ul>
           </div>
         </div>
         <div className="border-t border-secondary-foreground/10 mt-8 sm:mt-10 pt-6 sm:pt-8 text-center">
-          <p className="font-body text-[10px] sm:text-xs text-secondary-foreground/30">
+          <p className="font-body text-[10px] sm:text-xs text-secondary-foreground/70">
             © {new Date().getFullYear()} TechBridge. All rights reserved.
           </p>
         </div>
