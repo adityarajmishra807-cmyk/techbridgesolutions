@@ -23,7 +23,7 @@ const CTASection = () => {
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground leading-tight mb-4 sm:mb-6">
               Ready to Transform Your <span className="text-gradient-warm">School?</span>
             </h2>
-            <p className="font-body text-secondary-foreground/60 text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8">
+            <p className="font-body text-secondary-foreground/80 text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8">
               Discuss your school's requirements and request a project-specific quotation. Share the lab or infrastructure scope, available space and student capacity so equipment categories and quantities can be reviewed before finalisation.
             </p>
 
@@ -73,7 +73,7 @@ const CTASection = () => {
                   <item.icon className="w-4 sm:w-5 h-4 sm:h-5 text-primary" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-[10px] sm:text-xs font-body font-medium text-secondary-foreground/40 uppercase tracking-wider">{item.label}</div>
+                  <div className="text-[10px] sm:text-xs font-body font-medium text-secondary-foreground/75 uppercase tracking-wider">{item.label}</div>
                   <div className="font-body text-sm sm:text-base font-medium text-secondary-foreground truncate">{item.value}</div>
                 </div>
               </motion.a>
