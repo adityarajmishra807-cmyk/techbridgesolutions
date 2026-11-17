@@ -14,12 +14,14 @@ const Index = () => {
     <div className="min-h-screen relative">
       <FloatingElements />
       <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <ProductShowcase />
-      <Gallery />
-      <CTASection />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <ServicesSection />
+        <ProductShowcase />
+        <Gallery />
+        <CTASection />
+      </main>
       <Footer />
       <WhatsAppFAB />
     </div>
