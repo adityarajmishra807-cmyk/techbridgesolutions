@@ -131,6 +131,8 @@ const Gallery = () => {
                   <img
                     src={item.src}
                     alt={item.alt}
+                    width={800}
+                    height={800}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
                     loading="lazy"
                     decoding="async"
@@ -194,6 +196,8 @@ const Gallery = () => {
               <img
                 src={filtered[lightboxIndex].src}
                 alt={filtered[lightboxIndex].alt}
+                width={1600}
+                height={1200}
                 className="max-w-full max-h-[70vh] sm:max-h-[75vh] object-contain rounded-lg shadow-2xl"
                 decoding="async"
               />
