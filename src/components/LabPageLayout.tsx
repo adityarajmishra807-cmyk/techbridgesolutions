@@ -53,6 +53,7 @@ const LabPageLayout = ({
     <div className="min-h-screen">
       <Navbar />
 
+      <main>
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
@@ -329,7 +330,7 @@ const LabPageLayout = ({
             transition={{ delay: 0.1 }}
             className="font-body text-secondary-foreground/60 text-lg mb-10 max-w-xl mx-auto"
           >
-            Get a free consultation and custom quote tailored to your school's space and budget.
+            Share your school's space, requirements and project scope to discuss suitable equipment and a project-specific quotation.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -358,6 +359,7 @@ const LabPageLayout = ({
         </div>
       </section>
 
+      </main>
       <Footer />
       <WhatsAppFAB />
     </div>
