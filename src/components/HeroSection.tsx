@@ -127,7 +127,7 @@ const HeroSection = () => {
               <div className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-primary">
                 {stat.display ? stat.display : <AnimatedCounter target={stat.value} suffix={stat.suffix} />}
               </div>
-              <div className="text-xs sm:text-sm font-body text-secondary-foreground/50 mt-1">{stat.label}</div>
+              <div className="text-xs sm:text-sm font-body text-secondary-foreground/80 mt-1">{stat.label}</div>
             </div>
           ))}
         </motion.div>
