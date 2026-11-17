@@ -12,7 +12,7 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-[100svh] flex items-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroImg} alt="Modern school laboratory" className="w-full h-full object-cover" width={1920} height={1080} />
+        <img src={heroImg} alt="Modern school laboratory" className="w-full h-full object-cover" width={1920} height={1080} loading="eager" fetchPriority="high" decoding="async" />
         <div className="absolute inset-0 bg-secondary/75" />
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, hsl(220 20% 14% / 0.88), hsl(32 80% 50% / 0.15))" }} />
       </div>
