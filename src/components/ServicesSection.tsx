@@ -6,18 +6,18 @@ import { Link } from "react-router-dom";
 const WHATSAPP_URL = "https://wa.me/918800883727?text=Hi%20TechBridge%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.";
 
 const services = [
-  { icon: Microscope, title: "Physics Lab", desc: "Complete physics lab setups with optical benches, meters, electrical equipment and demonstration tables.", link: "/labs/physics" },
-  { icon: FlaskConical, title: "Chemistry Lab", desc: "Fully equipped chemistry labs with glassware, reagent storage, fume hoods and safety systems.", link: "/labs/chemistry" },
-  { icon: Calculator, title: "Maths Lab", desc: "Interactive maths labs with 3D models, geometry kits, algebra tools and digital learning aids.", link: "/labs/maths" },
-  { icon: Dna, title: "Biology Lab", desc: "Biology labs with microscopes, specimen jars, dissection kits and anatomical models.", link: "/labs/biology" },
-  { icon: Monitor, title: "Computer Lab", desc: "Modern computer labs with networking, UPS systems, ergonomic furniture and licensed software.", link: "/labs/computer" },
-  { icon: Layers, title: "Composite Lab", desc: "Multi-disciplinary science labs that organise Physics, Chemistry and Biology activities in one shared space.", link: "/labs/composite" },
+  { icon: Microscope, title: "Physics Lab", desc: "Physics lab equipment and setup planning for school practicals, including optics, mechanics, electrical measurement and demonstration apparatus.", link: "/labs/physics" },
+  { icon: FlaskConical, title: "Chemistry Lab", desc: "Chemistry lab equipment and setup planning, including glassware, balances, heating apparatus, reagent storage and safety essentials.", link: "/labs/chemistry" },
+  { icon: Calculator, title: "Maths Lab", desc: "Maths lab equipment for hands-on learning, including geometry models, manipulatives, algebra kits and mensuration tools.", link: "/labs/maths" },
+  { icon: Dna, title: "Biology Lab", desc: "Biology lab equipment for observation and practical work, including microscopes, prepared slides, specimen containers and anatomical models.", link: "/labs/biology" },
+  { icon: Monitor, title: "Computer Lab", desc: "School computer lab setup planning for workstations, networking, power backup, peripherals, software and computer furniture.", link: "/labs/computer" },
+  { icon: Layers, title: "Composite Lab", desc: "Composite science lab equipment and planning for shared physics, chemistry and biology practical activities.", link: "/labs/composite" },
   { icon: Home, title: "Kindergarten Setup", desc: "Safe, colorful play areas with age-appropriate furniture, toys and educational materials." },
   { icon: BookOpen, title: "Library Setup", desc: "Complete library solutions with shelving, reading tables, and organized storage systems." },
   { icon: Armchair, title: "School Furniture", desc: "Benches, desks, chairs, almirahs and storage solutions built for durability and comfort." },
   { icon: PanelTop, title: "Classroom Boards", desc: "Black boards, green boards, white boards and smart interactive boards for modern classrooms." },
   { icon: Trophy, title: "Sports Courts", desc: "Indoor and outdoor sports court installations for basketball, badminton, volleyball and more." },
-  { icon: Sun, title: "Solar Power Plants", desc: "Rooftop solar installations to help schools reduce energy costs and go green." },
+  { icon: Sun, title: "Solar Power Plants", desc: "Solar power solutions for school campuses, with requirements assessed against the site's infrastructure and energy needs." },
 ];
 
 const ServicesSection = () => {
