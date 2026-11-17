@@ -133,6 +133,7 @@ const Gallery = () => {
                     alt={item.alt}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/60 transition-colors duration-300 flex items-end p-2 sm:p-4">
                     <div className="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
@@ -194,6 +195,7 @@ const Gallery = () => {
                 src={filtered[lightboxIndex].src}
                 alt={filtered[lightboxIndex].alt}
                 className="max-w-full max-h-[70vh] sm:max-h-[75vh] object-contain rounded-lg shadow-2xl"
+                decoding="async"
               />
               <div className="mt-3 sm:mt-4 text-center">
                 <span className="text-xs font-body text-primary">{filtered[lightboxIndex].category}</span>
