@@ -65,6 +65,8 @@ const ProductShowcase = () => {
                 <img
                   src={product.image}
                   alt={product.title}
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   loading="lazy"
                   decoding="async"
