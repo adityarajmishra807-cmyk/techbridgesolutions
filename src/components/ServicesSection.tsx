@@ -40,7 +40,7 @@ const ServicesSection = () => {
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground leading-tight mb-3 sm:mb-4">
             Complete School <span className="text-gradient-warm">Infrastructure</span>
           </h2>
-          <p className="font-body text-secondary-foreground/60 text-sm sm:text-base md:text-lg">
+          <p className="font-body text-secondary-foreground/80 text-sm sm:text-base md:text-lg">
             From science labs to solar panels — everything your institution needs under one roof.
           </p>
         </motion.div>
@@ -53,7 +53,7 @@ const ServicesSection = () => {
                   <service.icon className="w-5 sm:w-6 h-5 sm:h-6 text-primary transition-colors duration-300" />
                 </div>
                 <h3 className="font-display text-sm sm:text-base font-semibold text-secondary-foreground mb-1 sm:mb-2">{service.title}</h3>
-                <p className="font-body text-xs sm:text-sm text-secondary-foreground/50 leading-relaxed mb-2 sm:mb-3 line-clamp-3">{service.desc}</p>
+                <p className="font-body text-xs sm:text-sm text-secondary-foreground/75 leading-relaxed mb-2 sm:mb-3 line-clamp-3">{service.desc}</p>
                 {service.link && (
                   <span className="inline-flex items-center gap-1 text-xs font-body font-medium text-primary">
                     View Details <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
@@ -87,7 +87,7 @@ const ServicesSection = () => {
         </div>
 
         <div className="mt-8 sm:mt-10 text-center">
-          <p className="font-body text-sm sm:text-base text-secondary-foreground/55 mb-2">Planning a new or upgraded school laboratory?</p>
+          <p className="font-body text-sm sm:text-base text-secondary-foreground/75 mb-2">Planning a new or upgraded school laboratory?</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
             <Link to="/guides/school-laboratory-setup-checklist" className="inline-flex items-center gap-2 font-body text-sm font-semibold text-primary hover:underline">
               Read the school laboratory setup checklist <ArrowRight className="w-4 h-4" />
