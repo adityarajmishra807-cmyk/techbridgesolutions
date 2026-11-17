@@ -166,7 +166,7 @@ const LabPageLayout = ({
                 className="relative"
               >
                 <div className="rounded-2xl overflow-hidden shadow-[var(--shadow-premium)]">
-                  <img src={secondaryImage} alt={title} className="w-full h-auto object-cover" loading="lazy" decoding="async" />
+                  <img src={secondaryImage} alt={title} width={1024} height={768} className="w-full h-auto object-cover" loading="lazy" decoding="async" />
                 </div>
                 <motion.div
                   className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl -z-10"
