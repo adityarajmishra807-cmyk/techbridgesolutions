@@ -87,7 +87,7 @@ const Gallery = () => {
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground leading-tight mb-3 sm:mb-4">
               Our <span className="text-gradient-warm">Installations</span>
             </h2>
-            <p className="font-body text-secondary-foreground/60 text-sm sm:text-base md:text-lg">
+            <p className="font-body text-secondary-foreground/80 text-sm sm:text-base md:text-lg">
               A showcase of school laboratory, classroom and campus infrastructure installations by TechBridge Solutions.
             </p>
           </motion.div>
@@ -106,7 +106,7 @@ const Gallery = () => {
                 className={`px-3 sm:px-4 py-2 rounded-full text-xs font-body font-medium transition-all duration-200 whitespace-nowrap shrink-0 active:scale-95 ${
                 activeCategory === cat
                     ? "bg-primary text-primary-foreground shadow-[var(--shadow-glow)]"
-                    : "bg-secondary-foreground/10 border border-secondary-foreground/15 text-secondary-foreground/70 hover:border-primary/30 hover:text-secondary-foreground"
+                    : "bg-secondary-foreground/10 border border-secondary-foreground/15 text-secondary-foreground/85 hover:border-primary/30 hover:text-secondary-foreground"
                 }`}
               >
                 {cat}
@@ -204,7 +204,7 @@ const Gallery = () => {
               <div className="mt-3 sm:mt-4 text-center">
                 <span className="text-xs font-body text-primary">{filtered[lightboxIndex].category}</span>
                 <h3 className="font-display text-base sm:text-lg font-semibold text-secondary-foreground">{filtered[lightboxIndex].title}</h3>
-                <span className="text-xs font-body text-secondary-foreground/40 mt-1 block">
+                <span className="text-xs font-body text-secondary-foreground/75 mt-1 block">
                   {lightboxIndex + 1} / {filtered.length}
                 </span>
               </div>
