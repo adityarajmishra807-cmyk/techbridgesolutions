@@ -78,7 +78,7 @@ const LabPageLayout = ({
             animate={heroInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5 }}
           >
-            <Link to="/" className="inline-flex items-center gap-2 text-secondary-foreground/60 hover:text-primary font-body text-sm mb-8 transition-colors">
+            <Link to="/" className="inline-flex items-center gap-2 text-secondary-foreground/80 hover:text-primary font-body text-sm mb-8 transition-colors">
               <ArrowLeft className="w-4 h-4" /> Back to Home
             </Link>
           </motion.div>
@@ -224,7 +224,7 @@ const LabPageLayout = ({
             <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary-foreground leading-tight mb-4">
               Complete <span className="text-gradient-warm">Inventory</span>
             </h2>
-            <p className="font-body text-secondary-foreground/50">The list below shows equipment categories and examples for this laboratory. Check final selection and quantities against the school's class levels, practical programme and existing inventory.</p>
+            <p className="font-body text-secondary-foreground/80">The list below shows equipment categories and examples for this laboratory. Check final selection and quantities against the school's class levels, practical programme and existing inventory.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -241,7 +241,7 @@ const LabPageLayout = ({
                 </h3>
                 <ul className="space-y-2.5">
                   {cat.items.map((item, j) => (
-                    <li key={j} className="font-body text-sm text-secondary-foreground/60 flex items-start gap-2.5">
+                    <li key={j} className="font-body text-sm text-secondary-foreground/80 flex items-start gap-2.5">
                       <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ background: color }} />
                       {item}
                     </li>
@@ -328,7 +328,7 @@ const LabPageLayout = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-body text-secondary-foreground/60 text-lg mb-10 max-w-xl mx-auto"
+            className="font-body text-secondary-foreground/80 text-lg mb-10 max-w-xl mx-auto"
           >
             Share your school's space, requirements and project scope to discuss suitable equipment and a project-specific quotation.
           </motion.p>
