@@ -52,7 +52,7 @@ const Navbar = () => {
       >
         <div className="container-narrow flex items-center justify-between h-14 sm:h-16 px-4 sm:px-6 lg:px-12">
           <a href="/#home" className="flex items-center gap-2 shrink-0">
-            <img src={logo} alt="TechBridge" className="h-8 sm:h-10 w-auto rounded-md" />
+            <img src={logo} alt="TechBridge" width={1281} height={1457} className="h-8 sm:h-10 w-auto rounded-md" />
           </a>
 
           <div className="hidden lg:flex items-center gap-6 xl:gap-8">
