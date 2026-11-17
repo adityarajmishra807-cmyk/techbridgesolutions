@@ -18,6 +18,8 @@ const ParallaxImage = ({ src, alt, className = "", speed = 0.3 }: ParallaxImageP
       <motion.img
         src={src}
         alt={alt}
+        width={1920}
+        height={1080}
         style={{ y }}
         className="w-full h-[120%] object-cover"
         loading="eager"
