@@ -46,6 +46,8 @@ const AboutSection = () => {
               <motion.img
                 src={classroomImg}
                 alt="Modern classroom by TechBridge"
+                width={1024}
+                height={768}
                 className="w-full h-auto object-cover"
                 loading="lazy"
                 whileHover={{ scale: 1.03 }}
