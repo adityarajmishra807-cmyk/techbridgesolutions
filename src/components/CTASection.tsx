@@ -24,7 +24,7 @@ const CTASection = () => {
               Ready to Transform Your <span className="text-gradient-warm">School?</span>
             </h2>
             <p className="font-body text-secondary-foreground/60 text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8">
-              Get a free consultation and custom quote for your institution. Our team will design the perfect solution tailored to your space, budget, and requirements.
+              Discuss your school's requirements and request a project-specific quotation. Share the lab or infrastructure scope, available space and student capacity so equipment categories and quantities can be reviewed before finalisation.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
