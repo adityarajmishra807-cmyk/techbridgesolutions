@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container-narrow px-4 sm:px-6 lg:px-12 py-10 sm:py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
           <div className="col-span-2 md:col-span-1">
-            <img src={logo} alt="TechBridge" className="h-10 w-auto mb-4 rounded-md" style={{ filter: "brightness(0) invert(1)" }} />
+            <img src={logo} alt="TechBridge" width={1281} height={1457} className="h-10 w-auto mb-4 rounded-md" style={{ filter: "brightness(0) invert(1)" }} />
             <p className="font-body text-xs sm:text-sm text-secondary-foreground/50 leading-relaxed max-w-xs mb-4">
               Bridging Ideas to Innovation in Education. Your trusted partner for modern school infrastructure.
             </p>
