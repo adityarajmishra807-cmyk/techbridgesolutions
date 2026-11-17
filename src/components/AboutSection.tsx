@@ -6,7 +6,7 @@ import classroomImg from "@/assets/classroom.png";
 const values = [
   { icon: Shield, title: "Safety First", desc: "Rounded edges, high-quality fittings, and layouts planned for safe movement." },
   { icon: Lightbulb, title: "Innovation", desc: "Modern, future-ready designs that inspire curiosity and exploration." },
-  { icon: Wrench, title: "Practical Planning", desc: "Equipment choices are reviewed against class levels, practical activities and everyday school use." }
+  { icon: Wrench, title: "Practical Planning", desc: "Equipment choices are reviewed against class levels, practical activities and everyday school use." },
   { icon: GraduationCap, title: "School-Focused", desc: "Solutions are considered in the context of each school's learning spaces and infrastructure requirements." }
 ];
 
