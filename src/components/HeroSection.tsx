@@ -68,14 +68,11 @@ const HeroSection = () => {
             Setup &amp; Infrastructure
           </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-base sm:text-lg md:text-xl font-body text-secondary-foreground/70 max-w-xl mb-8 sm:mb-10 leading-relaxed"
+          <p
+            className="text-base sm:text-lg md:text-xl font-body text-secondary-foreground/90 max-w-xl mb-8 sm:mb-10 leading-relaxed"
           >
             School laboratory setup and equipment for physics, chemistry, maths, biology, computer and composite labs, alongside wider school infrastructure solutions. Based in Gorakhpur, supporting school requirements across Uttar Pradesh, Bihar, Delhi and Uttarakhand.
-          </motion.p>
+          </p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
